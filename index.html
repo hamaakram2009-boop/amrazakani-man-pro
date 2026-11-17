@@ -93,7 +93,7 @@ const data=[
 {id:'bio',name:'بایۆساز',desc:'دروستکردنی بایۆی پرۆفیشناڵ بۆ ئینستاگرام، تیکتۆک و لینکدئین',cat:'بازاڕگەری',ico:'✍️'},
 {id:'msgmaker',name:'نامەساز',desc:'ئامادەکردنی نامەی فەرمی، پیرۆزبایی، داواکاری و بازرگانی',cat:'بازاڕگەری',ico:'✉️'},
 {id:'emailcheck',name:'پشکنینی ئیمەیڵ',desc:'پشکنینی دروستی شێوازی ئیمەیڵ، دۆمەین و ئاسایشی ناونیشان',cat:'ئاسایش',ico:'📧'},
-{id:'games',name:'یارییە سادەکان',desc:'یاری X-O بەرامبەر زیرەکی دەستکرد، یاری بیرەوەری و مەتەڵی ژمارە',cat:'کاتبەسەربردن',ico:'🎮'},
+{id:'games',name:'یارییە سادەکان',desc:'یاری X-O، بەرد کاغەز قیچی، بیرەوەری، مەتەڵی ژمارە و زانیاری گشتی',cat:'کاتبەسەربردن',ico:'🎮'},
 
 // ئامرازە زۆر سەرنجڕاکێشە زیادکراوەکان
 {id:'lovecalc',name:'ژمێرەری خۆشەویستی',desc:'پشکنینی ڕێژەی گونجان و خۆشەویستی لە نێوان دوو ناو',cat:'کاتبەسەربردن',ico:'💖'},
@@ -595,7 +595,7 @@ function run(){
       case'coin':r=Math.random()<.5?'🪙 ڕوو':'🪙 پشت';break;
       case'color':r=a;break;
       case'username':r=a.toLowerCase().trim().replace(/\s+/g, '_')+'_'+Math.floor(10+Math.random()*90);break;
-      case'hashtags':r=a.trim().split(/[\s,،]+/).filter(Boolean).map(t=>'#'+t.replace(/[^\p{L}\p{N}_]/gu,``)).join(' ');break;
+      case'hashtags':r=a.trim().split(/[\s,،]+/).filter(Boolean).map(t=>'#'+t.replace(/[^\p{L}\p{N}_]/gu,'')).join(' ');break;
 
       case'receipt':{
         let amt=Number($('#r_amt').value||0);
@@ -913,7 +913,7 @@ function run(){
         let txt=$('#gt_inp').value.trim(), st=$('#gt_style').value;
         if(!txt)throw Error('دەق بنووسە');
         if(st==='bubble'){
-          const map={'a':'Ⓐ','b':'Ⓑ','c':'Ⓒ','d':'Ⓓ','e':'Ⓔ','f':'Ⓕ','g':'Ⓖ','h':'Ⓗ','i':'Ⓘ','j':'Ⓙ','k':'Ⓚ','l':'Ⓛ','m':'Ⓜ','n':'Ⓝ','o':'Ⓞ','p':'Ⓟ','q':'Ⓠ','r':'Ⓡ','s':'Ⓢ','t':'Ⓣ','u':'Ⓤ','v':'Ⓥ','w':'Ⓦ','x':'Ⓧ','y':'⒎','z':'Ⓩ','ا':'ا','ب':'ب'};
+          const map={'a':'Ⓐ','b':'Ⓑ','c':'Ⓒ','d':'Ⓓ','e':'Ⓔ','f':'Ⓕ','g':'Ⓖ','h':'Ⓗ','i':'Ⓘ','j':'Ⓙ','k':'Ⓚ','l':'Ⓛ','m':'Ⓜ','n':'Ⓝ','o':'Ⓞ','p':'Ⓟ','q':'Ⓠ','r':'Ⓡ','s':'Ⓢ','t':'Ⓣ','u':'Ⓤ','v':'Ⓥ','w':'Ⓦ','x':'Ⓧ','y':'Ⓨ','z':'Ⓩ','ا':'ا','ب':'ب'};
           r=[...txt].map(c=>map[c.toLowerCase()]||c).join('');
         }else if(st==='space'){
           r=[...txt].join('   ');
