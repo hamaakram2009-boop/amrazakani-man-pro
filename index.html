@@ -8,7 +8,7 @@
 <style>
 :root{--bg:#090e1c;--panel:#111a2d;--panel2:#17233b;--text:#edf3ff;--muted:#9aa9c2;--line:#263653;--a:#8b5cf6;--b:#22d3ee;--ok:#10b981;--warn:#f59e0b;--err:#ef4444;--shadow:0 18px 45px #0005}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% -10%,#31205c 0,transparent 32%),radial-gradient(circle at 0 35%,#10374a 0,transparent 28%),var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;min-height:100vh}
-button,input,textarea,select{font:inherit}button{cursor:pointer}.app{display:grid;grid-template-columns:250px 1fr;min-height:100vh}.side{padding:25px 18px;border-left:1px solid var(--line);background:#0b1222d9;position:sticky;top:0;height:100vh;overflow-y:auto}.brand{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:800;margin-bottom:30px}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--a),var(--b));display:grid;place-items:center;font-size:23px;box-shadow:0 8px 24px #8b5cf655;flex-shrink:0}.small{color:var(--muted);font-size:12px}.navtitle{color:#71819d;font-size:12px;margin:25px 10px 9px}.nav button{width:100%;text-align:right;border:0;color:var(--muted);background:transparent;padding:12px;border-radius:12px;margin:3px 0;transition:.15s}.nav button.active,.nav button:hover{background:#202d49;color:white}.main{padding:28px;max-width:1400px;width:100%;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:24px}.top h1{font-size:25px;margin:0}.actions{display:flex;gap:9px;align-items:center}.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:12px;padding:10px 14px;transition:.15s}.btn:hover{border-color:#7c65d9}.btn.sm{padding:6px 10px;font-size:12px;border-radius:8px}.btn.danger{border-color:#ef444455;color:#fca5a5}.btn.danger:hover{background:#ef444422}.hero{padding:30px;border:1px solid #ffffff20;border-radius:24px;background:linear-gradient(115deg,#4c1d95cc,#164e63cc);box-shadow:var(--shadow);position:relative;overflow:hidden}.hero:after{content:"✦";position:absolute;left:35px;top:10px;font-size:110px;color:#ffffff18}.hero h2{font-size:30px;margin:0 0 10px}.hero p{color:#e0eaff;max-width:620px;line-height:1.9;margin:0 0 22px}.search{width:min(100%,560px);padding:14px 17px;border-radius:13px;border:1px solid #ffffff35;background:#0b1229;color:white;outline:none}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}.stat,.card,.workspace{background:linear-gradient(145deg,var(--panel),#10182a);border:1px solid var(--line);border-radius:18px;padding:18px}.stat{display:flex;align-items:center;gap:14px}.stat .ico{font-size:26px}.stat strong{font-size:24px;display:block}.stat span{color:var(--muted);font-size:13px}.sectionhead{display:flex;justify-content:space-between;align-items:center;margin:28px 0 14px;flex-wrap:wrap;gap:10px}.sectionhead h3{margin:0;font-size:19px}.categories{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:14px}.chip{border:1px solid var(--line);background:#121d32;color:var(--muted);padding:9px 14px;border-radius:30px;transition:.15s}.chip.active,.chip:hover{background:#5531a0;color:white;border-color:#8b5cf6}.tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{cursor:pointer;transition:.2s;display:flex;flex-direction:column;justify-content:space-between}.card:hover{transform:translateY(-3px);border-color:#7c65d9;box-shadow:var(--shadow)}.card .emoji{font-size:27px}.card h4{margin:12px 0 6px;font-size:16px}.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}.card .badge{display:inline-block;font-size:11px;color:var(--b);background:#22d3ee15;border:1px solid #22d3ee33;padding:2px 8px;border-radius:20px;margin-top:10px;width:fit-content}.workspace{margin-top:20px;display:none;scroll-margin-top:20px}.workspace.show{display:block}.workspace h3{margin-top:0}.field{display:grid;gap:7px;margin:13px 0}.field label{color:var(--muted);font-size:13px}.field input,.field textarea,.field select{width:100%;padding:12px;border:1px solid var(--line);border-radius:11px;background:#0b1426;color:var(--text);outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--a)}.field textarea{min-height:110px;resize:vertical}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.result{padding:15px;background:#0a1425;border:1px dashed #506184;border-radius:12px;white-space:pre-wrap;overflow-wrap:anywhere;margin-top:14px;line-height:1.8}.primary{background:linear-gradient(100deg,var(--a),#2563eb);border:0;color:white;padding:11px 17px;border-radius:11px;font-weight:600;transition:.15s}.primary:hover{opacity:.92}.btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.tbl-wrap{overflow-x:auto;margin-top:12px;border:1px solid var(--line);border-radius:12px}.tbl{width:100%;border-collapse:collapse;font-size:13px}.tbl th,.tbl td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:right}.tbl th{background:#152036;color:var(--muted);font-weight:600}.tbl tr:last-child td{border-bottom:0}.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:12px 0}.kpi{background:#0b1426;border:1px solid var(--line);border-radius:12px;padding:12px}.kpi span{font-size:12px;color:var(--muted);display:block}.kpi strong{font-size:18px;margin-top:4px;display:block}.paper{background:#fff;color:#111827;padding:24px;border-radius:14px;border:1px solid #cbd5e1;margin-top:14px;box-shadow:0 10px 30px #0004}.paper h4{margin:0 0 6px;font-size:20px;color:#0f172a}.paper table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}.paper th,.paper td{border:1px solid #cbd5e1;padding:8px;text-align:right}.paper th{background:#f1f5f9}.pill{display:inline-block;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:600}.pill.ok{background:#10b98122;color:#34d399;border:1px solid #10b98144}.pill.warn{background:#f59e0b22;color:#fbbf24;border:1px solid #f59e0b44}.pill.err{background:#ef444422;color:#f87171;border:1px solid #ef444444}.bar-wrap{height:10px;background:#1e293b;border-radius:99px;overflow:hidden;margin:8px 0}.bar-fill{height:100%;transition:.3s}.timer-big{font-size:48px;font-weight:800;font-variant-numeric:tabular-nums;text-align:center;padding:20px;background:#0b1426;border:1px solid var(--line);border-radius:16px;margin:12px 0;letter-spacing:2px}.game-board{display:grid;grid-template-columns:repeat(3,84px);gap:8px;justify-content:center;margin:16px auto}.game-cell{width:84px;height:84px;background:#0b1426;border:1px solid var(--line);border-radius:14px;font-size:34px;font-weight:800;color:var(--text);display:grid;place-items:center}.game-cell:hover{border-color:var(--a)}.mem-grid{display:grid;grid-template-columns:repeat(4,70px);gap:8px;justify-content:center;margin:16px auto}.mem-card{width:70px;height:70px;background:#17233b;border:1px solid var(--line);border-radius:12px;font-size:26px;display:grid;place-items:center;color:var(--text)}.mem-card.open{background:#31205c;border-color:var(--a)}.empty{color:var(--muted);padding:22px;text-align:center;grid-column:1/-1}.footer{text-align:center;color:#71819d;font-size:12px;padding:30px}
+button,input,textarea,select{font:inherit}button{cursor:pointer}.app{display:grid;grid-template-columns:250px 1fr;min-height:100vh}.side{padding:25px 18px;border-left:1px solid var(--line);background:#0b1222d9;position:sticky;top:0;height:100vh;overflow-y:auto}.brand{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:800;margin-bottom:30px}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--a),var(--b));display:grid;place-items:center;font-size:23px;box-shadow:0 8px 24px #8b5cf655;flex-shrink:0}.small{color:var(--muted);font-size:12px}.navtitle{color:#71819d;font-size:12px;margin:25px 10px 9px}.nav button{width:100%;text-align:right;border:0;color:var(--muted);background:transparent;padding:12px;border-radius:12px;margin:3px 0;transition:.15s}.nav button.active,.nav button:hover{background:#202d49;color:white}.main{padding:28px;max-width:1400px;width:100%;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:24px}.top h1{font-size:25px;margin:0}.actions{display:flex;gap:9px;align-items:center}.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:12px;padding:10px 14px;transition:.15s}.btn:hover{border-color:#7c65d9}.btn.sm{padding:6px 10px;font-size:12px;border-radius:8px}.btn.danger{border-color:#ef444455;color:#fca5a5}.btn.danger:hover{background:#ef444422}.hero{padding:30px;border:1px solid #ffffff20;border-radius:24px;background:linear-gradient(115deg,#4c1d95cc,#164e63cc);box-shadow:var(--shadow);position:relative;overflow:hidden}.hero:after{content:"✦";position:absolute;left:35px;top:10px;font-size:110px;color:#ffffff18}.hero h2{font-size:30px;margin:0 0 10px}.hero p{color:#e0eaff;max-width:620px;line-height:1.9;margin:0 0 22px}.search{width:min(100%,560px);padding:14px 17px;border-radius:13px;border:1px solid #ffffff35;background:#0b1229;color:white;outline:none}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}.stat,.card,.workspace{background:linear-gradient(145deg,var(--panel),#10182a);border:1px solid var(--line);border-radius:18px;padding:18px}.stat{display:flex;align-items:center;gap:14px}.stat .ico{font-size:26px}.stat strong{font-size:24px;display:block}.stat span{color:var(--muted);font-size:13px}.sectionhead{display:flex;justify-content:space-between;align-items:center;margin:28px 0 14px;flex-wrap:wrap;gap:10px}.sectionhead h3{margin:0;font-size:19px}.categories{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:14px}.chip{border:1px solid var(--line);background:#121d32;color:var(--muted);padding:9px 14px;border-radius:30px;transition:.15s}.chip.active,.chip:hover{background:#5531a0;color:white;border-color:#8b5cf6}.tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{cursor:pointer;transition:.2s;display:flex;flex-direction:column;justify-content:space-between}.card:hover{transform:translateY(-3px);border-color:#7c65d9;box-shadow:var(--shadow)}.card .emoji{font-size:27px}.card h4{margin:12px 0 6px;font-size:16px}.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}.card .badge{display:inline-block;font-size:11px;color:var(--b);background:#22d3ee15;border:1px solid #22d3ee33;padding:2px 8px;border-radius:20px;margin-top:10px;width:fit-content}.workspace{margin-top:20px;display:none;scroll-margin-top:20px}.workspace.show{display:block}.workspace h3{margin-top:0}.field{display:grid;gap:7px;margin:13px 0}.field label{color:var(--muted);font-size:13px}.field input,.field textarea,.field select{width:100%;padding:12px;border:1px solid var(--line);border-radius:11px;background:#0b1426;color:var(--text);outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--a)}.field textarea{min-height:110px;resize:vertical}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.result{padding:15px;background:#0a1425;border:1px dashed #506184;border-radius:12px;white-space:pre-wrap;overflow-wrap:anywhere;margin-top:14px;line-height:1.8}.primary{background:linear-gradient(100deg,var(--a),#2563eb);border:0;color:white;padding:11px 17px;border-radius:11px;font-weight:600;transition:.15s}.primary:hover{opacity:.92}.btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.tbl-wrap{overflow-x:auto;margin-top:12px;border:1px solid var(--line);border-radius:12px}.tbl{width:100%;border-collapse:collapse;font-size:13px}.tbl th,.tbl td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:right}.tbl th{background:#152036;color:var(--muted);font-weight:600}.tbl tr:last-child td{border-bottom:0}.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:12px 0}.kpi{background:#0b1426;border:1px solid var(--line);border-radius:12px;padding:12px}.kpi span{font-size:12px;color:var(--muted);display:block}.kpi strong{font-size:18px;margin-top:4px;display:block}.paper{background:#fff;color:#111827;padding:24px;border-radius:14px;border:1px solid #cbd5e1;margin-top:14px;box-shadow:0 10px 30px #0004}.paper h4{margin:0 0 6px;font-size:20px;color:#0f172a}.paper table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}.paper th,.paper td{border:1px solid #cbd5e1;padding:8px;text-align:right}.paper th{background:#f1f5f9}.pill{display:inline-block;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:600}.pill.ok{background:#10b98122;color:#34d399;border:1px solid #10b98144}.pill.warn{background:#f59e0b22;color:#fbbf24;border:1px solid #f59e0b44}.pill.err{background:#ef444422;color:#f87171;border:1px solid #ef444444}.bar-wrap{height:10px;background:#1e293b;border-radius:99px;overflow:hidden;margin:8px 0}.bar-fill{height:100%;transition:.3s}.timer-big{font-size:48px;font-weight:800;font-variant-numeric:tabular-nums;text-align:center;padding:20px;background:#0b1426;border:1px solid var(--line);border-radius:16px;margin:12px 0;letter-spacing:2px}.game-board{display:grid;grid-template-columns:repeat(3,84px);gap:8px;justify-content:center;margin:16px auto}.game-cell{width:84px;height:84px;background:#0b1426;border:1px solid var(--line);border-radius:14px;font-size:34px;font-weight:800;color:var(--text);display:grid;place-items:center}.game-cell:hover{border-color:var(--a)}.mem-grid{display:grid;grid-template-columns:repeat(4,70px);gap:8px;justify-content:center;margin:16px auto}.mem-card{width:70px;height:70px;background:#17233b;border:1px solid var(--line);border-radius:12px;font-size:26px;display:grid;place-items:center;color:var(--text)}.mem-card.open{background:#31205c;border-color:var(--a)}.empty{color:var(--muted);padding:22px;text-align:center;grid-column:1/-1}.footer{text-align:center;color:#71819d;font-size:12px;padding:30px;line-height:1.8}
 body.light{--bg:#eef2fb;--panel:#fff;--panel2:#f4f6fc;--text:#18233a;--muted:#65738d;--line:#d8e0ef;background:#eef2fb;color:var(--text)}body.light .side{background:#fff}body.light .hero{color:white}body.light .search,body.light .field input,body.light .field textarea,body.light .field select,body.light .result,body.light .kpi,body.light .timer-big,body.light .game-cell{background:#fff;color:#18233a}body.light .tbl th{background:#f1f5f9}body.light .chip{background:#fff;color:#475569}body.light .chip.active{background:#5531a0;color:#fff}
 @media(max-width:850px){.app{display:block}.side{position:relative;height:auto;padding:14px 16px;border-left:0;border-bottom:1px solid var(--line)}.brand{margin:0}.nav{display:flex;overflow:auto;gap:5px;margin-top:12px}.nav button{white-space:nowrap;width:auto;padding:9px 12px}.navtitle{display:none}.main{padding:18px 14px}.tools{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:23px}.hero h2{font-size:24px}.grid2,.grid3{grid-template-columns:1fr}}
 @media(max-width:480px){.stats{grid-template-columns:1fr}.tools{grid-template-columns:1fr}.top h1{font-size:19px}.actions .btn{padding:9px}.timer-big{font-size:36px}}
@@ -40,13 +40,12 @@ body.light{--bg:#eef2fb;--panel:#fff;--panel2:#f4f6fc;--text:#18233a;--muted:#65
   <div class="categories" id="categories"></div>
   <section class="tools" id="tools"></section>
   <section class="workspace" id="workspace"><div class="sectionhead"><h3 id="toolTitle">ئامراز</h3><button class="btn" id="closeTool">✕ داخستن</button></div><div id="toolBody"></div></section>
-  <div class="footer">✦ ئامرازەکانی من Pro · دروستکراوە بە ❤️</div>
+  <div class="footer">✦ ئامرازەکانی من Pro · دروستکراوە لەلایەن <strong>محمد اکرم</strong><br>📱 واتسئەپ: <a href="https://wa.me/9647506956604" target="_blank" style="color:var(--b);text-decoration:none">07506956604</a></div>
 </main>
 </div>
 
 <script>
 const data=[
-// ئامرازە کۆنەکان (بەبێ هیچ گۆڕانکارییەک)
 {id:'calc',name:'ژمێرەری',desc:'کردنی ژمێریارییە خێراکان',cat:'ژمێریاری',ico:'🧮'},
 {id:'percent',name:'هەژمارکردنی ڕێژە',desc:'ڕێژەی سەدی و بەشەکان هەژمار بکە',cat:'ژمێریاری',ico:'％'},
 {id:'discount',name:'ژمێریاری داشکاندن',desc:'نرخی دوای داشکاندن بدۆزەوە',cat:'ژمێریاری',ico:'🏷️'},
@@ -68,7 +67,7 @@ const data=[
 {id:'hashtags',name:'دروستکەری هاشتاگ',desc:'هاشتاگی گونجاو دروست بکە',cat:'سوودبەخش',ico:'#️⃣'},
 {id:'clean',name:'پاککردنەوەی دەق',desc:'بۆشایی زیادە لە دەق بسڕەوە',cat:'دەق',ico:'🧹'},
 
-// ٢٦ ئامرازە نوێیەکە
+// ئامرازە نوێیەکان
 {id:'receipt',name:'وەسڵساز',desc:'دروستکردنی وەسڵی وەرگرتن و پێدانی پارە بۆ چاپکردن',cat:'بازرگانی و دارایی',ico:'🧾'},
 {id:'invoice',name:'فاکتورساز',desc:'دروستکردنی فاکتۆری فرۆشتن بە کاڵا و داشکاندنەوە',cat:'بازرگانی و دارایی',ico:'📑'},
 {id:'pnl',name:'قازانج و زیان',desc:'هەژمارکردنی داهات، تێچوو، قازانجی سافی و ڕێژەی قازانج',cat:'بازرگانی و دارایی',ico:'📈'},
@@ -94,7 +93,13 @@ const data=[
 {id:'bio',name:'بایۆساز',desc:'دروستکردنی بایۆی پرۆفیشناڵ بۆ ئینستاگرام، تیکتۆک و لینکدئین',cat:'بازاڕگەری',ico:'✍️'},
 {id:'msgmaker',name:'نامەساز',desc:'ئامادەکردنی نامەی فەرمی، پیرۆزبایی، داواکاری و بازرگانی',cat:'بازاڕگەری',ico:'✉️'},
 {id:'emailcheck',name:'پشکنینی ئیمەیڵ',desc:'پشکنینی دروستی شێوازی ئیمەیڵ، دۆمەین و ئاسایشی ناونیشان',cat:'ئاسایش',ico:'📧'},
-{id:'games',name:'یارییە سادەکان',desc:'یاری X-O بەرامبەر زیرەکی دەستکرد، یاری بیرەوەری و مەتەڵی ژمارە',cat:'کاتبەسەربردن',ico:'🎮'}
+{id:'games',name:'یارییە سادەکان',desc:'یاری X-O بەرامبەر زیرەکی دەستکرد، یاری بیرەوەری و مەتەڵی ژمارە',cat:'کاتبەسەربردن',ico:'🎮'},
+
+// ئامرازە زۆر سەرنجڕاکێشە زیادکراوەکان
+{id:'lovecalc',name:'ژمێرەری خۆشەویستی',desc:'پشکنینی ڕێژەی گونجان و خۆشەویستی لە نێوان دوو ناو',cat:'کاتبەسەربردن',ico:'💖'},
+{id:'liveage',name:'تەمەنی ورد بە چرکە',desc:'ژماردنی وردی تەمەن بە ساڵ، مانگ، ڕۆژ، کاتژمێر و چرکە',cat:'کات',ico:'⏳'},
+{id:'devinfo',name:'زانیاری ئامێرەکەم',desc:'پیشاندانی جۆری ئامێر، براوسەر، قەبارەی شاشە و سیستەم',cat:'کۆد و تەکنەلۆژیا',ico:'💻'},
+{id:'glichttxt',name:'دەقی بریقەدار (Glitch)',desc:'گۆڕینی دەقی ئاسایی بۆ شێوازی جوان و سەرنجڕاکێش بۆ سۆشیال میدیا',cat:'دەق',ico:'✨'}
 ];
 
 const $=s=>document.querySelector(s);
@@ -129,7 +134,6 @@ function openTool(id){
   let x=data.find(a=>a.id===id);if(!x)return;active=id;
   let body='';
   switch(id){
-    // ئامرازە کۆنەکان
     case'calc':body=field('ژمارەی یەکەم','a')+field('کردار (+ − × ÷)','op','+ or -')+field('ژمارەی دووەم','b')+button('هەژمار بکە');break;
     case'percent':body=field('ژمارە','a')+field('چەند لە سەد؟','b')+button('هەژمار بکە');break;
     case'discount':case'tax':body=field('نرخی سەرەتا','a')+field('ڕێژەی سەدی','b')+button('هەژمار بکە');break;
@@ -146,7 +150,6 @@ function openTool(id){
     case'username':body=field('ناو یان وشەی دڵخواز','a')+button('ناو دروست بکە');break;
     case'hashtags':body=field('بابەت','a','وەرزش، تەکنەلۆژیا...')+button('هاشتاگ دروست بکە');break;
 
-    // ئامرازە نوێیەکان
     case'receipt':
       body=`<div class="grid2">
         ${field('ناوی کۆمپانیا / فرۆشگا','r_comp','کۆمپانیای نموونە','text','ئامرازەکانی من Pro')}
@@ -418,6 +421,30 @@ function openTool(id){
       </div>
       <div id="gameArea"></div>`;
       break;
+
+    case'lovecalc':
+      body=`<div class="grid2">
+        ${field('ناوی یەکەم (بۆ نموونە: ئارام)','lc_1','ناوی یەکەم')}
+        ${field('ناوی دووەم (بۆ نموونە: ژالیا)','lc_2','ناوی دووەم')}
+      </div>`+button('هەژمارکردنی ڕێژەی خۆشەویستی ❤️');
+      break;
+
+    case'liveage':
+      body=field('بەرواری لەدایکبوونت هەڵبژێرە','la_date','','date')+button('پیشاندانی تەمەنی ورد');
+      break;
+
+    case'devinfo':
+      body=`<div id="devInfoArea"></div>`;
+      break;
+
+    case'glichttxt':
+      body=`${area('دەقەکەت بنووسە','gt_inp','سڵاو کوردستان')}
+      <div class="field"><label>شێوازی بریقەدارکردن</label><select id="gt_style">
+        <option value="zalgo">شێوازی تێکەڵ و ترسناک (Zalgo)</option>
+        <option value="bubble">شێوازی بازنەیی (ⓃⓄⓀ)</option>
+        <option value="space">بۆشایی فراوان (س ڵ ا و)</option>
+      </select></div>`+button('گۆڕینی دەق');
+      break;
   }
 
   $('#toolTitle').textContent=x.ico+' '+x.name;
@@ -501,6 +528,33 @@ function initToolExtras(id){
       };
     });
   }
+  if(id==='devinfo'){
+    let ua=navigator.userAgent;
+    let br='نەناسراو';
+    if(ua.includes('Firefox'))br='Mozilla Firefox';
+    else if(ua.includes('SamsungBrowser'))br='Samsung Internet';
+    else if(ua.includes('Opera')||ua.includes('OPR'))br='Opera';
+    else if(ua.includes('Trident'))br='Internet Explorer';
+    else if(ua.includes('Edge'))br='Microsoft Edge';
+    else if(ua.includes('Chrome'))br='Google Chrome';
+    else if(ua.includes('Safari'))br='Apple Safari';
+
+    let os='نەناسراو';
+    if(ua.includes('Win'))os='Windows';
+    else if(ua.includes('Mac'))os='MacOS';
+    else if(ua.includes('Linux'))os='Linux';
+    else if(ua.includes('Android'))os='Android';
+    else if(ua.includes('like Mac')||ua.includes('iPhone')||ua.includes('iPad'))os='iOS / iPhone';
+
+    $('#devInfoArea').innerHTML=`
+      <div class="kpi-grid">
+        <div class="kpi"><span>جۆری براوسەر</span><strong>${br}</strong></div>
+        <div class="kpi"><span>سیستەمی بەرگە</span><strong>${os}</strong></div>
+        <div class="kpi"><span>قەبارەی شاشە</span><strong>${window.innerWidth} × ${window.innerHeight} px</strong></div>
+        <div class="kpi"><span>زمانی براوسەر</span><strong>${navigator.language}</strong></div>
+      </div>
+    `;
+  }
   if(id==='games'){initGames('xo');}
 }
 
@@ -520,7 +574,6 @@ function run(){
   let a=$('#a')?.value??'',b=$('#b')?.value??'',n=Number(a),m=Number(b),r='';
   try{
     switch(active){
-      // ئامرازە کۆنەکان
       case'calc':if(!Number.isFinite(n)||!Number.isFinite(m))throw Error('ژمارەی دروست بنووسە');r=({'+':n+m,'-':n-m,'*':n*m,'×':n*m,'/':m?n/m:'ناتوانرێت بە سفر دابەش بکرێت','÷':m?n/m:'ناتوانرێت بە سفر دابەش بکرێت'})[$('#op').value.trim()]??'کردارەکە هەڵەیە';break;
       case'percent':r=(n*m/100).toLocaleString('en-US');break;
       case'discount':r='نرخی دوای داشکاندن: '+(n-n*m/100).toFixed(2);break;
@@ -539,10 +592,9 @@ function run(){
       case'random':if(m<n)throw Error('ژمارەی کۆتایی دەبێت گەورەتر بێت');r=Math.floor(Math.random()*(m-n+1))+n;break;
       case'coin':r=Math.random()<.5?'🪙 ڕوو':'🪙 پشت';break;
       case'color':r=a;break;
-      case'username':r=a.toLowerCase().trim().replace(/\s+/g,'_')+'_'+Math.floor(10+Math.random()*90);break;
+      case'username':r=a.toLowerCase().trim().replace(/\s+/g, '_')+'_'+Math.floor(10+Math.random()*90);break;
       case'hashtags':r=a.trim().split(/[\s,،]+/).filter(Boolean).map(t=>'#'+t.replace(/[^\p{L}\p{N}_]/gu,'')).join(' ');break;
 
-      // ئامرازە نوێیەکان
       case'receipt':{
         let amt=Number($('#r_amt').value||0);
         if(amt<=0)throw Error('تکایە بڕی پارەی دروست بنووسە');
@@ -829,12 +881,51 @@ function run(){
         }
         break;
       }
+
+      case'lovecalc':{
+        let n1=$('#lc_1').value.trim(), n2=$('#lc_2').value.trim();
+        if(!n1||!n2)throw Error('تکایە هەردوو ناوەکەت بنووسە');
+        let combined=(n1+n2).toLowerCase();
+        let hash=0;for(let i=0;i<combined.length;i++)hash+=combined.charCodeAt(i);
+        let score=40+(hash%55); // ڕێژەی نێوان 40 تا 95 بۆ سەرسامکردن
+        r=`💖 ڕێژەی گونجان و خۆشەویستی نێوان (${n1}) و (${n2}):\n\n✨ ${score}٪ ✨\n\n${score>85?'ئاهەنگ بگێڕن! ئێوە زۆر بۆ یەکتر گونجاون! 😍':score>70?'پەیوەندییەکی زۆر باش و بەهێزە 🥰':'پێویست بە کات و تێگەیشتنی زیاتر دەکات 😉'}`;
+        break;
+      }
+
+      case'liveage':{
+        let dt=$('#la_date').value;
+        if(!dt)throw Error('تکایە بەرواری لەدایکبوون هەڵبژێرە');
+        let d=new Date(dt), now=new Date();
+        let diff=now-d;
+        if(diff<0)throw Error('بەروارەکە هەڵەیە!');
+        let days=Math.floor(diff/(1000*60*60*24));
+        let hours=Math.floor(diff/(1000*60*60));
+        let mins=Math.floor(diff/(1000*60));
+        let secs=Math.floor(diff/1000);
+        let breaths=days*22000; // خەمڵاندنی هەناسە
+        r=`⏳ وردەکاری تەمەنت تا ئەم ساتە:\n\n• ڕۆژەکان: ${fmt(days)} ڕۆژ\n• کاتژمێرەکان: ${fmt(hours)} کاتژمێر\n• خولەکەکان: ${fmt(mins)} خولەک\n• چرکەکان: ${fmt(secs)} چرکە\n• خەمڵاندنی ژمارەی هەناسەکانت: نزیکەی ${fmt(breaths)} هەناسە 🫁`;
+        break;
+      }
+
+      case'glichttxt':{
+        let txt=$('#gt_inp').value.trim(), st=$('#gt_style').value;
+        if(!txt)throw Error('دەق بنووسە');
+        if(st==='bubble'){
+          const map={'a':'Ⓐ','b':'Ⓑ','c':'Ⓒ','d':'Ⓓ','e':'Ⓔ','f':'Ⓕ','g':'Ⓖ','h':'Ⓗ','i':'Ⓘ','j':'Ⓙ','k':'Ⓚ','l':'Ⓛ','m':'Ⓜ','n':'Ⓝ','o':'Ⓞ','p':'Ⓟ','q':'Ⓠ','r':'Ⓡ','s':'Ⓢ','t':'Ⓣ','u':'Ⓤ','v':'Ⓥ','w':'Ⓦ','x':'Ⓧ','y':'Ⓨ','z':'Ⓩ','ا':'ا','ب':'ب'};
+          r=[...txt].map(c=>map[c.toLowerCase()]||c).join('');
+        }else if(st==='space'){
+          r=[...txt].join('   ');
+        }else{
+          let zc=['̷','̶','̴','̵','̹','̺','̻','̼','̽','̾','̿','̀','́','͂','̓','̈́','͆','͇','͈','͉','͊','͋','͌','͍','͎','͏','͐','͑','͒','ͣ','ͤ','ͥ','ͦ','ͧ','ͨ','ͩ','ͪ','ͫ','ͬ','ͭ','ͮ','ͯ'];
+          r=[...txt].map(c=>c+zc[Math.floor(Math.random()*zc.length)]+zc[Math.floor(Math.random()*zc.length)]).join('');
+        }
+        break;
+      }
     }
   }catch(e){r='هەڵە: '+e.message}
-  showResult(r,['password','json','color','hashtags','reverse','clean','base64','shortener','brandname','bio','msgmaker'].includes(active));
+  showResult(r,['password','json','color','hashtags','reverse','clean','base64','shortener','brandname','bio','msgmaker','glichttxt','liveage','lovecalc'].includes(active));
 }
 
-// بارکۆد Code128B لەسەر Canvas
 function drawCode128(canvas,text,label){
   const patterns=["11011001100","11001101100","11001100110","10010011000","10010001100","10001001100","10011001000","10011000100","10001100100","11001001000","11001000100","11000100100","10110011100","10011011100","10011001110","10111001100","10011101100","10011100110","11001110010","11001011100","11001001110","11011100100","11001110100","11101101110","11101001100","11100101100","11100100110","11101100100","11100110100","11100110010","11011011000","11011000110","11000110110","10100011000","10001011000","10001000110","10110001000","10001101000","10001100010","11010001000","11000101000","11000100010","10110111000","10110001110","10001101110","10111011000","10111000110","10001110110","11101110110","11010001110","11000101110","11011101000","11011100010","11011101110","11101011000","11101000110","11100010110","11101101000","11101100010","11100011010","11101111010","11001000010","11110001010","10100110000","10100001100","10010110000","10010000110","10000101100","10000100110","10110010000","10110000100","10011010000","10011000010","10000110100","10000110010","11000010010","11001010000","11110111010","11000010100","10001111010","10100111100","10010111100","10010011110","10111100100","10011110100","10011110010","11110100100","11110010100","11110010010","11011011110","11011110110","11110110110","10101111000","10100011110","10001011110","10111101000","10111100010","11110101000","11110100010","10111011110","10111101110","11101011110","11110101110","11010000100","11010010000","11010011100","1100011101011"];
   let codes=[104],sum=104;
@@ -856,7 +947,6 @@ function drawCode128(canvas,text,label){
   if(label){ctx.font='12px Tahoma,sans-serif';ctx.fillStyle='#475569';ctx.fillText(label,w/2,124);}
 }
 
-// بەڕێوەبردنی کۆگا
 function renderInventory(){
   let items=get('proInventory');
   let totVal=items.reduce((s,x)=>s+x.qty*x.buy,0);
@@ -885,7 +975,6 @@ function renderInventory(){
 window.chgInv=(i,d)=>{let l=get('proInventory');if(l[i]){l[i].qty=Math.max(0,l[i].qty+d);put('proInventory',l);renderInventory();}};
 window.delInv=(i)=>{let l=get('proInventory');l.splice(i,1);put('proInventory',l);renderInventory();};
 
-// کارمەندان
 function renderEmployees(){
   let list=get('proEmployees');
   let totSal=list.reduce((s,x)=>s+x.sal,0);
@@ -905,7 +994,6 @@ function renderEmployees(){
 }
 window.delEmp=(i)=>{let l=get('proEmployees');l.splice(i,1);put('proEmployees',l);renderEmployees();};
 
-// ڕاپۆرتی دارایی
 function renderFinReport(){
   let list=get('proFinReport');
   let inc=list.filter(x=>x.type==='in').reduce((s,x)=>s+x.amt,0);
@@ -928,7 +1016,6 @@ function renderFinReport(){
 }
 window.delFr=(i)=>{let l=get('proFinReport');l.splice(i,1);put('proFinReport',l);renderFinReport();};
 
-// تێبینی
 function renderNotes(){
   let list=get('proNotes');
   $('#notesListArea').innerHTML=list.length?`<div class="grid2" style="margin-top:16px">${list.map((n,i)=>`<div class="kpi">
@@ -944,7 +1031,6 @@ function renderNotes(){
 }
 window.delNote=(i)=>{let l=get('proNotes');l.splice(i,1);put('proNotes',l);renderNotes();};
 
-// ڕێکخەری ئەرک
 function renderTasks(){
   let list=get('proTasks');
   $('#tasksListArea').innerHTML=list.length?`<div style="display:grid;gap:8px;margin-top:16px">${list.map((t,i)=>`<div class="kpi" style="display:flex;justify-content:space-between;align-items:center;opacity:${t.done?.6:1}">
@@ -964,7 +1050,6 @@ function renderTasks(){
 window.togTask=(i)=>{let l=get('proTasks');if(l[i]){l[i].done=!l[i].done;put('proTasks',l);renderTasks();}};
 window.delTask=(i)=>{let l=get('proTasks');l.splice(i,1);put('proTasks',l);renderTasks();};
 
-// کورتکەرەوەی لینک
 function renderShortLinks(){
   let list=get('proShortLinks');
   $('#shListArea').innerHTML=list.length?`<div class="tbl-wrap" style="margin-top:16px"><table class="tbl"><thead><tr><th>لینکی کورت</th><th>لینکی بنەڕەتی</th><th>کۆپی</th></tr></thead><tbody>
@@ -972,7 +1057,6 @@ function renderShortLinks(){
   </tbody></table></div>`:'';
 }
 
-// تایمەر و ستۆپواچ
 function initTimer(){
   let mode='countdown',secLeft=300,running=false;
   const upd=()=>{
@@ -1011,7 +1095,6 @@ function initTimer(){
   $('#tmReset').onclick=reset;
 }
 
-// یارییە سادەکان
 function initGames(mode){
   document.querySelectorAll('[data-gmode]').forEach(b=>{
     b.classList.toggle('active',b.dataset.gmode===mode);
