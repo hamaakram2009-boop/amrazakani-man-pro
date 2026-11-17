@@ -6,12 +6,13 @@
 <meta name="theme-color" content="#0b1020">
 <title>ئامرازەکانی من Pro</title>
 <style>
-:root{--bg:#090e1c;--panel:#111a2d;--panel2:#17233b;--text:#edf3ff;--muted:#9aa9c2;--line:#263653;--a:#8b5cf6;--b:#22d3ee;--shadow:0 18px 45px #0005}
+:root{--bg:#090e1c;--panel:#111a2d;--panel2:#17233b;--text:#edf3ff;--muted:#9aa9c2;--line:#263653;--a:#8b5cf6;--b:#22d3ee;--ok:#10b981;--warn:#f59e0b;--err:#ef4444;--shadow:0 18px 45px #0005}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% -10%,#31205c 0,transparent 32%),radial-gradient(circle at 0 35%,#10374a 0,transparent 28%),var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;min-height:100vh}
-button,input,textarea,select{font:inherit}button{cursor:pointer}.app{display:grid;grid-template-columns:250px 1fr;min-height:100vh}.side{padding:25px 18px;border-left:1px solid var(--line);background:#0b1222d9;position:sticky;top:0;height:100vh}.brand{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:800;margin-bottom:30px}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--a),var(--b));display:grid;place-items:center;font-size:23px;box-shadow:0 8px 24px #8b5cf655}.small{color:var(--muted);font-size:12px}.navtitle{color:#71819d;font-size:12px;margin:25px 10px 9px}.nav button{width:100%;text-align:right;border:0;color:var(--muted);background:transparent;padding:12px;border-radius:12px;margin:3px 0}.nav button.active,.nav button:hover{background:#202d49;color:white}.main{padding:28px;max-width:1400px;width:100%;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:24px}.top h1{font-size:25px;margin:0}.actions{display:flex;gap:9px;align-items:center}.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:12px;padding:10px 14px}.hero{padding:30px;border:1px solid #ffffff20;border-radius:24px;background:linear-gradient(115deg,#4c1d95cc,#164e63cc);box-shadow:var(--shadow);position:relative;overflow:hidden}.hero:after{content:"✦";position:absolute;left:35px;top:10px;font-size:110px;color:#ffffff18}.hero h2{font-size:30px;margin:0 0 10px}.hero p{color:#e0eaff;max-width:620px;line-height:1.9;margin:0 0 22px}.search{width:min(100%,560px);padding:14px 17px;border-radius:13px;border:1px solid #ffffff35;background:#0b1229;color:white;outline:none}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}.stat,.card,.workspace{background:linear-gradient(145deg,var(--panel),#10182a);border:1px solid var(--line);border-radius:18px;padding:18px}.stat{display:flex;align-items:center;gap:14px}.stat .ico{font-size:26px}.stat strong{font-size:24px;display:block}.stat span{color:var(--muted);font-size:13px}.sectionhead{display:flex;justify-content:space-between;align-items:center;margin:28px 0 14px}.sectionhead h3{margin:0;font-size:19px}.categories{display:flex;gap:9px;flex-wrap:wrap}.chip{border:1px solid var(--line);background:#121d32;color:var(--muted);padding:9px 14px;border-radius:30px}.chip.active,.chip:hover{background:#5531a0;color:white;border-color:#8b5cf6}.tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{cursor:pointer;transition:.2s}.card:hover{transform:translateY(-3px);border-color:#7c65d9;box-shadow:var(--shadow)}.card .emoji{font-size:27px}.card h4{margin:12px 0 6px;font-size:16px}.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}.workspace{margin-top:20px;display:none}.workspace.show{display:block}.workspace h3{margin-top:0}.field{display:grid;gap:7px;margin:13px 0}.field label{color:var(--muted);font-size:13px}.field input,.field textarea,.field select{width:100%;padding:12px;border:1px solid var(--line);border-radius:11px;background:#0b1426;color:var(--text);outline:none}.field textarea{min-height:110px;resize:vertical}.result{padding:13px;background:#0a1425;border:1px dashed #506184;border-radius:11px;white-space:pre-wrap;overflow-wrap:anywhere;margin-top:12px}.primary{background:linear-gradient(100deg,var(--a),#2563eb);border:0;color:white;padding:11px 17px;border-radius:11px}.empty{color:var(--muted);padding:22px;text-align:center}.footer{text-align:center;color:#71819d;font-size:12px;padding:30px}
-body.light{--bg:#eef2fb;--panel:#fff;--panel2:#f4f6fc;--text:#18233a;--muted:#65738d;--line:#d8e0ef;background:#eef2fb;color:var(--text)}body.light .side{background:#fff}body.light .hero{color:white}body.light .search,body.light .field input,body.light .field textarea,body.light .field select,body.light .result{background:#fff;color:#18233a}
-@media(max-width:850px){.app{display:block}.side{position:relative;height:auto;padding:14px 16px;border-left:0;border-bottom:1px solid var(--line)}.brand{margin:0}.nav{display:flex;overflow:auto;gap:5px;margin-top:12px}.nav button{white-space:nowrap;width:auto;padding:9px 12px}.navtitle{display:none}.main{padding:18px 14px}.tools{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:23px}.hero h2{font-size:24px}}
-@media(max-width:480px){.stats{grid-template-columns:1fr}.tools{grid-template-columns:1fr}.top h1{font-size:19px}.actions .btn{padding:9px}}
+button,input,textarea,select{font:inherit}button{cursor:pointer}.app{display:grid;grid-template-columns:250px 1fr;min-height:100vh}.side{padding:25px 18px;border-left:1px solid var(--line);background:#0b1222d9;position:sticky;top:0;height:100vh;overflow-y:auto}.brand{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:800;margin-bottom:30px}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--a),var(--b));display:grid;place-items:center;font-size:23px;box-shadow:0 8px 24px #8b5cf655;flex-shrink:0}.small{color:var(--muted);font-size:12px}.navtitle{color:#71819d;font-size:12px;margin:25px 10px 9px}.nav button{width:100%;text-align:right;border:0;color:var(--muted);background:transparent;padding:12px;border-radius:12px;margin:3px 0;transition:.15s}.nav button.active,.nav button:hover{background:#202d49;color:white}.main{padding:28px;max-width:1400px;width:100%;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:24px}.top h1{font-size:25px;margin:0}.actions{display:flex;gap:9px;align-items:center}.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:12px;padding:10px 14px;transition:.15s}.btn:hover{border-color:#7c65d9}.btn.sm{padding:6px 10px;font-size:12px;border-radius:8px}.btn.danger{border-color:#ef444455;color:#fca5a5}.btn.danger:hover{background:#ef444422}.hero{padding:30px;border:1px solid #ffffff20;border-radius:24px;background:linear-gradient(115deg,#4c1d95cc,#164e63cc);box-shadow:var(--shadow);position:relative;overflow:hidden}.hero:after{content:"✦";position:absolute;left:35px;top:10px;font-size:110px;color:#ffffff18}.hero h2{font-size:30px;margin:0 0 10px}.hero p{color:#e0eaff;max-width:620px;line-height:1.9;margin:0 0 22px}.search{width:min(100%,560px);padding:14px 17px;border-radius:13px;border:1px solid #ffffff35;background:#0b1229;color:white;outline:none}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}.stat,.card,.workspace{background:linear-gradient(145deg,var(--panel),#10182a);border:1px solid var(--line);border-radius:18px;padding:18px}.stat{display:flex;align-items:center;gap:14px}.stat .ico{font-size:26px}.stat strong{font-size:24px;display:block}.stat span{color:var(--muted);font-size:13px}.sectionhead{display:flex;justify-content:space-between;align-items:center;margin:28px 0 14px;flex-wrap:wrap;gap:10px}.sectionhead h3{margin:0;font-size:19px}.categories{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:14px}.chip{border:1px solid var(--line);background:#121d32;color:var(--muted);padding:9px 14px;border-radius:30px;transition:.15s}.chip.active,.chip:hover{background:#5531a0;color:white;border-color:#8b5cf6}.tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{cursor:pointer;transition:.2s;display:flex;flex-direction:column;justify-content:space-between}.card:hover{transform:translateY(-3px);border-color:#7c65d9;box-shadow:var(--shadow)}.card .emoji{font-size:27px}.card h4{margin:12px 0 6px;font-size:16px}.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}.card .badge{display:inline-block;font-size:11px;color:var(--b);background:#22d3ee15;border:1px solid #22d3ee33;padding:2px 8px;border-radius:20px;margin-top:10px;width:fit-content}.workspace{margin-top:20px;display:none;scroll-margin-top:20px}.workspace.show{display:block}.workspace h3{margin-top:0}.field{display:grid;gap:7px;margin:13px 0}.field label{color:var(--muted);font-size:13px}.field input,.field textarea,.field select{width:100%;padding:12px;border:1px solid var(--line);border-radius:11px;background:#0b1426;color:var(--text);outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--a)}.field textarea{min-height:110px;resize:vertical}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.result{padding:15px;background:#0a1425;border:1px dashed #506184;border-radius:12px;white-space:pre-wrap;overflow-wrap:anywhere;margin-top:14px;line-height:1.8}.primary{background:linear-gradient(100deg,var(--a),#2563eb);border:0;color:white;padding:11px 17px;border-radius:11px;font-weight:600;transition:.15s}.primary:hover{opacity:.92}.btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.tbl-wrap{overflow-x:auto;margin-top:12px;border:1px solid var(--line);border-radius:12px}.tbl{width:100%;border-collapse:collapse;font-size:13px}.tbl th,.tbl td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:right}.tbl th{background:#152036;color:var(--muted);font-weight:600}.tbl tr:last-child td{border-bottom:0}.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:12px 0}.kpi{background:#0b1426;border:1px solid var(--line);border-radius:12px;padding:12px}.kpi span{font-size:12px;color:var(--muted);display:block}.kpi strong{font-size:18px;margin-top:4px;display:block}.paper{background:#fff;color:#111827;padding:24px;border-radius:14px;border:1px solid #cbd5e1;margin-top:14px;box-shadow:0 10px 30px #0004}.paper h4{margin:0 0 6px;font-size:20px;color:#0f172a}.paper table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}.paper th,.paper td{border:1px solid #cbd5e1;padding:8px;text-align:right}.paper th{background:#f1f5f9}.pill{display:inline-block;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:600}.pill.ok{background:#10b98122;color:#34d399;border:1px solid #10b98144}.pill.warn{background:#f59e0b22;color:#fbbf24;border:1px solid #f59e0b44}.pill.err{background:#ef444422;color:#f87171;border:1px solid #ef444444}.bar-wrap{height:10px;background:#1e293b;border-radius:99px;overflow:hidden;margin:8px 0}.bar-fill{height:100%;transition:.3s}.timer-big{font-size:48px;font-weight:800;font-variant-numeric:tabular-nums;text-align:center;padding:20px;background:#0b1426;border:1px solid var(--line);border-radius:16px;margin:12px 0;letter-spacing:2px}.game-board{display:grid;grid-template-columns:repeat(3,84px);gap:8px;justify-content:center;margin:16px auto}.game-cell{width:84px;height:84px;background:#0b1426;border:1px solid var(--line);border-radius:14px;font-size:34px;font-weight:800;color:var(--text);display:grid;place-items:center}.game-cell:hover{border-color:var(--a)}.mem-grid{display:grid;grid-template-columns:repeat(4,70px);gap:8px;justify-content:center;margin:16px auto}.mem-card{width:70px;height:70px;background:#17233b;border:1px solid var(--line);border-radius:12px;font-size:26px;display:grid;place-items:center;color:var(--text)}.mem-card.open{background:#31205c;border-color:var(--a)}.empty{color:var(--muted);padding:22px;text-align:center;grid-column:1/-1}.footer{text-align:center;color:#71819d;font-size:12px;padding:30px}
+body.light{--bg:#eef2fb;--panel:#fff;--panel2:#f4f6fc;--text:#18233a;--muted:#65738d;--line:#d8e0ef;background:#eef2fb;color:var(--text)}body.light .side{background:#fff}body.light .hero{color:white}body.light .search,body.light .field input,body.light .field textarea,body.light .field select,body.light .result,body.light .kpi,body.light .timer-big,body.light .game-cell{background:#fff;color:#18233a}body.light .tbl th{background:#f1f5f9}body.light .chip{background:#fff;color:#475569}body.light .chip.active{background:#5531a0;color:#fff}
+@media(max-width:850px){.app{display:block}.side{position:relative;height:auto;padding:14px 16px;border-left:0;border-bottom:1px solid var(--line)}.brand{margin:0}.nav{display:flex;overflow:auto;gap:5px;margin-top:12px}.nav button{white-space:nowrap;width:auto;padding:9px 12px}.navtitle{display:none}.main{padding:18px 14px}.tools{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:23px}.hero h2{font-size:24px}.grid2,.grid3{grid-template-columns:1fr}}
+@media(max-width:480px){.stats{grid-template-columns:1fr}.tools{grid-template-columns:1fr}.top h1{font-size:19px}.actions .btn{padding:9px}.timer-big{font-size:36px}}
+@media print{body *{visibility:hidden}.paper,.paper *{visibility:visible}.paper{position:fixed;inset:0;margin:0;border:0;box-shadow:none;z-index:9999}}
 </style>
 </head>
 <body>
@@ -29,7 +30,7 @@ body.light{--bg:#eef2fb;--panel:#fff;--panel2:#f4f6fc;--text:#18233a;--muted:#65
 </aside>
 <main class="main">
   <div class="top"><h1>💎 ئامرازەکانی من Pro</h1><div class="actions"><button class="btn" id="theme">☼ ڕووناکی</button><button class="btn">🌐 KU</button></div></div>
-  <section class="hero"><h2>بەخێربێیت 👋</h2><p>ئامرازە زیرەکەکان بۆ کار، خوێندن و ژیانی ڕۆژانەت. خێرا، ئاسان و بە تەواوی بەخۆڕایی.</p><input class="search" id="search" placeholder="🔎 گەڕان بە ناوی ئامراز..."></section>
+  <section class="hero"><h2>بەخێربێیت 👋</h2><p>ئامرازە زیرەکەکان بۆ کار، بازرگانی، خوێندن و ژیانی ڕۆژانەت. خێرا، ئاسان و بە تەواوی بەخۆڕایی.</p><input class="search" id="search" placeholder="🔎 گەڕان بە ناوی ئامراز..."></section>
   <section class="stats">
     <div class="stat"><div class="ico">🧰</div><div><strong id="total">0</strong><span>ئامرازی بەردەست</span></div></div>
     <div class="stat"><div class="ico">⭐</div><div><strong id="favCount">0</strong><span>ئامرازی دڵخواز</span></div></div>
@@ -42,8 +43,10 @@ body.light{--bg:#eef2fb;--panel:#fff;--panel2:#f4f6fc;--text:#18233a;--muted:#65
   <div class="footer">✦ ئامرازەکانی من Pro · دروستکراوە بە ❤️</div>
 </main>
 </div>
+
 <script>
 const data=[
+// ئامرازە کۆنەکان (بەبێ هیچ گۆڕانکارییەک)
 {id:'calc',name:'ژمێرەری',desc:'کردنی ژمێریارییە خێراکان',cat:'ژمێریاری',ico:'🧮'},
 {id:'percent',name:'هەژمارکردنی ڕێژە',desc:'ڕێژەی سەدی و بەشەکان هەژمار بکە',cat:'ژمێریاری',ico:'％'},
 {id:'discount',name:'ژمێریاری داشکاندن',desc:'نرخی دوای داشکاندن بدۆزەوە',cat:'ژمێریاری',ico:'🏷️'},
@@ -63,62 +66,1044 @@ const data=[
 {id:'color',name:'هەڵبژاردنی ڕەنگ',desc:'کۆدی HEX ـی ڕەنگ هەڵبژێرە',cat:'دیزاین',ico:'🎨'},
 {id:'username',name:'دروستکەری ناوی بەکارهێنەر',desc:'ناوی نوێ بۆ هەژمارەکانت',cat:'سوودبەخش',ico:'👤'},
 {id:'hashtags',name:'دروستکەری هاشتاگ',desc:'هاشتاگی گونجاو دروست بکە',cat:'سوودبەخش',ico:'#️⃣'},
-{id:'clean',name:'پاککردنەوەی دەق',desc:'بۆشایی زیادە لە دەق بسڕەوە',cat:'دەق',ico:'🧹'}
+{id:'clean',name:'پاککردنەوەی دەق',desc:'بۆشایی زیادە لە دەق بسڕەوە',cat:'دەق',ico:'🧹'},
+
+// ٢٦ ئامرازە نوێیەکە
+{id:'receipt',name:'وەسڵساز',desc:'دروستکردنی وەسڵی وەرگرتن و پێدانی پارە بۆ چاپکردن',cat:'بازرگانی و دارایی',ico:'🧾'},
+{id:'invoice',name:'فاکتورساز',desc:'دروستکردنی فاکتۆری فرۆشتن بە کاڵا و داشکاندنەوە',cat:'بازرگانی و دارایی',ico:'📑'},
+{id:'pnl',name:'قازانج و زیان',desc:'هەژمارکردنی داهات، تێچوو، قازانجی سافی و ڕێژەی قازانج',cat:'بازرگانی و دارایی',ico:'📈'},
+{id:'installment',name:'قیستی قەرز',desc:'خشتەی دانەوەی قیستی مانگانە و زیادەی قەرز',cat:'بازرگانی و دارایی',ico:'💳'},
+{id:'currency',name:'گۆڕینی دراو',desc:'گۆڕینی دینار، دۆلار، یۆرۆ، پاوەند و تمەن بە نرخی گۆڕاو',cat:'گۆڕین',ico:'💱'},
+{id:'salary',name:'مووچە',desc:'هەژمارکردنی مووچەی سافی، پاداشت، لێبڕین و کاتی زیادە',cat:'بازرگانی و دارایی',ico:'💵'},
+{id:'qrcode',name:'QR Code',desc:'دروستکردنی کۆدی QR بۆ لینک، دەق، واتسئەپ و وایفای بە داگرتنی PNG',cat:'کۆد و تەکنەلۆژیا',ico:'📱'},
+{id:'barcode',name:'بارکۆد',desc:'دروستکردنی بارکۆدی کاڵا (Code128) بە شێوەی وێنە بۆ چاپ',cat:'کۆد و تەکنەلۆژیا',ico:'📊'},
+{id:'inventory',name:'بەڕێوەبردنی کۆگا',desc:'تۆمارکردنی کاڵا، بڕی ماوە، نرخی کڕین و فرۆشتن بە پاشەکەوتکردن',cat:'بازرگانی و دارایی',ico:'📦'},
+{id:'employees',name:'کارمەندان',desc:'تۆمار و بەڕێوەبردنی داتای کارمەندان، بەش و مووچەکانیان',cat:'بازرگانی و دارایی',ico:'👥'},
+{id:'finreport',name:'ڕاپۆرتی دارایی',desc:'تۆمارکردنی داهات و خەرجی ڕۆژانە و شیکاری باڵانس',cat:'بازرگانی و دارایی',ico:'📋'},
+{id:'notes',name:'تێبینی',desc:'نووسین و پاشەکەوتکردنی تێبینییە خێراکان لەناو وێبگەڕەکەت',cat:'بەرهەمهێنان',ico:'📝'},
+{id:'tasks',name:'ڕێکخەری ئەرک',desc:'لیستی کارەکانی ڕۆژانە بە دیاریکردنی تەواوبوون و گرنگی',cat:'بەرهەمهێنان',ico:'✅'},
+{id:'timer',name:'تایمەر',desc:'کاتژمێری پێچەوانە، ستۆپواچ و تایمەری سەرنجدان (Pomodoro)',cat:'کات',ico:'⏱️'},
+{id:'passcheck',name:'پشکنینی وشەی نهێنی',desc:'پشکنینی ئاستی بەهێزی و ئاسایشی وشەی نهێنییەکەت',cat:'ئاسایش',ico:'🛡️'},
+{id:'imgcompress',name:'کەمکردنەوەی قەبارەی وێنە',desc:'بچووککردنەوەی قەبارەی وێنە (JPG/WebP) بەبێ تێکچوونی کوالێتی',cat:'میدیا و دیزاین',ico:'🖼️'},
+{id:'logo',name:'لۆگۆساز',desc:'دروستکردنی لۆگۆی مۆدێرن بە ئایکۆن، ڕەنگ و داگرتنی وێنە',cat:'میدیا و دیزاین',ico:'✨'},
+{id:'base64',name:'Base64',desc:'گۆڕینی دەق بۆ کۆدی Base64 و پێچەوانەکەی بە پشتگیری کوردی',cat:'کۆد و تەکنەلۆژیا',ico:'🔐'},
+{id:'shortener',name:'کورتکەرەوەی لینک',desc:'دروستکردنی کۆدی کورت و بەستەری ئامادە بە تۆمارکردنی مێژوو',cat:'کۆد و تەکنەلۆژیا',ico:'🔗'},
+{id:'listmaker',name:'دروستکەری لیست',desc:'ڕێکخستن، ژمارەدانان، لابردنی دووبارە و فلتەرکردنی لیستەکان',cat:'دەق',ico:'📑'},
+{id:'area',name:'حیسابکەری ڕووبەر',desc:'هەژمارکردنی ڕووبەر و چێوەی لاکێشە، چوارگۆشە، بازنە و سێگۆشە',cat:'ژمێریاری',ico:'📐'},
+{id:'brandname',name:'ناوی براند',desc:'پێشنیارکردنی ناوی بازرگانی و براندی سەرنجڕاکێش بەپێی بوار',cat:'بازاڕگەری',ico:'🚀'},
+{id:'bio',name:'بایۆساز',desc:'دروستکردنی بایۆی پرۆفیشناڵ بۆ ئینستاگرام، تیکتۆک و لینکدئین',cat:'بازاڕگەری',ico:'✍️'},
+{id:'msgmaker',name:'نامەساز',desc:'ئامادەکردنی نامەی فەرمی، پیرۆزبایی، داواکاری و بازرگانی',cat:'بازاڕگەری',ico:'✉️'},
+{id:'emailcheck',name:'پشکنینی ئیمەیڵ',desc:'پشکنینی دروستی شێوازی ئیمەیڵ، دۆمەین و ئاسایشی ناونیشان',cat:'ئاسایش',ico:'📧'},
+{id:'games',name:'یارییە سادەکان',desc:'یاری X-O بەرامبەر زیرەکی دەستکرد، یاری بیرەوەری و مەتەڵی ژمارە',cat:'کاتبەسەربردن',ico:'🎮'}
 ];
-const $=s=>document.querySelector(s);let category='هەموو',view='all',active=null;
-const get=(k)=>JSON.parse(localStorage.getItem(k)||'[]');const put=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
-function render(){let q=$('#search').value.trim().toLowerCase(),favs=get('proFav'),hist=get('proHist');$('#total').textContent=data.length;$('#favCount').textContent=favs.length;$('#usedCount').textContent=hist.length;
-let cats=['هەموو',...new Set(data.map(x=>x.cat))];$('#categories').innerHTML=cats.map(c=>`<button class="chip ${category===c?'active':''}" data-cat="${c}">${c}</button>`).join('');
-$('#sideCats').innerHTML=cats.slice(1).map(c=>`<button data-sidecat="${c}">▸ ${c}</button>`).join('');
-let items=data.filter(x=>(category==='هەموو'||x.cat===category)&&(!q||(x.name+x.desc+x.cat).toLowerCase().includes(q)));
-if(view==='fav')items=items.filter(x=>favs.includes(x.id));if(view==='history')items=items.filter(x=>hist.includes(x.id));
-$('#listTitle').textContent=view==='fav'?'☆ ئامرازە دڵخوازەکان':view==='history'?'◷ مێژووی بەکارهێنان':'✨ ئامرازەکان';$('#countLabel').textContent=items.length+' ئامراز';
-$('#tools').innerHTML=items.length?items.map(x=>`<article class="card" data-tool="${x.id}"><div style="display:flex;justify-content:space-between"><span class="emoji">${x.ico}</span><button class="btn fav" data-fav="${x.id}" aria-label="دڵخواز">${favs.includes(x.id)?'⭐':'☆'}</button></div><h4>${x.name}</h4><p>${x.desc}</p></article>`).join(''):'<div class="empty">هیچ ئامرازێک نەدۆزرایەوە</div>';
+
+const $=s=>document.querySelector(s);
+let category='هەموو',view='all',active=null,timerInterval=null;
+const get=(k,def='[]')=>{try{return JSON.parse(localStorage.getItem(k)||def)}catch{return JSON.parse(def)}};
+const put=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function fmt(n){return Number(n||0).toLocaleString('en-US',{maximumFractionDigits:2})}
+
+function render(){
+  let q=$('#search').value.trim().toLowerCase(),favs=get('proFav'),hist=get('proHist');
+  $('#total').textContent=data.length;
+  $('#favCount').textContent=favs.length;
+  $('#usedCount').textContent=hist.length;
+  let cats=['هەموو',...new Set(data.map(x=>x.cat))];
+  $('#categories').innerHTML=cats.map(c=>`<button class="chip ${category===c?'active':''}" data-cat="${c}">${c}</button>`).join('');
+  $('#sideCats').innerHTML=cats.slice(1).map(c=>`<button class="${category===c&&view==='all'?'active':''}" data-sidecat="${c}">▸ ${c}</button>`).join('');
+  let items=data.filter(x=>(category==='هەموو'||x.cat===category)&&(!q||(x.name+x.desc+x.cat).toLowerCase().includes(q)));
+  if(view==='fav')items=items.filter(x=>favs.includes(x.id));
+  if(view==='history')items=items.filter(x=>hist.includes(x.id));
+  $('#listTitle').textContent=view==='fav'?'☆ ئامرازە دڵخوازەکان':view==='history'?'◷ مێژووی بەکارهێنان':category!=='هەموو'?'📂 '+category:'✨ ئامرازەکان';
+  $('#countLabel').textContent=items.length+' ئامراز';
+  $('#tools').innerHTML=items.length?items.map(x=>`<article class="card" data-tool="${x.id}"><div><div style="display:flex;justify-content:space-between;align-items:center"><span class="emoji">${x.ico}</span><button class="btn fav" data-fav="${x.id}" aria-label="دڵخواز">${favs.includes(x.id)?'⭐':'☆'}</button></div><h4>${x.name}</h4><p>${x.desc}</p></div><span class="badge">${x.cat}</span></article>`).join(''):'<div class="empty">هیچ ئامرازێک نەدۆزرایەوە</div>';
 }
-function field(label,id,placeholder='',type='text'){return `<div class="field"><label>${label}</label><input id="${id}" type="${type}" placeholder="${placeholder}"></div>`}
-function area(label,id,placeholder=''){return `<div class="field"><label>${label}</label><textarea id="${id}" placeholder="${placeholder}"></textarea></div>`}
+
+function field(label,id,placeholder='',type='text',val=''){return `<div class="field"><label>${label}</label><input id="${id}" type="${type}" placeholder="${placeholder}" value="${escapeHtml(val)}"></div>`}
+function area(label,id,placeholder='',val=''){return `<div class="field"><label>${label}</label><textarea id="${id}" placeholder="${placeholder}">${escapeHtml(val)}</textarea></div>`}
 function button(label,fn='runTool'){return `<button class="primary" id="${fn}">${label}</button>`}
-function openTool(id){let x=data.find(a=>a.id===id);if(!x)return;active=id;let body='';
-switch(id){
-case'calc':body=field('ژمارەی یەکەم','a')+field('کردار (+ − × ÷)','op','+ or -')+field('ژمارەی دووەم','b')+button('هەژمار بکە');break;
-case'percent':body=field('ژمارە','a')+field('چەند لە سەد؟','b')+button('هەژمار بکە');break;
-case'discount':case'tax':body=field('نرخی سەرەتا','a')+field('ڕێژەی سەدی','b')+button('هەژمار بکە');break;
-case'length':case'weight':body=field('بڕ','a')+`<div class="field"><label>لە</label><select id="from">${(id==='length'?['مەتەر','کیلۆمەتەر','سانتیمەتەر']:['کیلۆگرام','گرام','پاوەند']).map(v=>`<option>${v}</option>`)}</select></div><div class="field"><label>بۆ</label><select id="to">${(id==='length'?['مەتەر','کیلۆمەتەر','سانتیمەتەر']:['کیلۆگرام','گرام','پاوەند']).map(v=>`<option>${v}</option>`)}</select></div>`+button('بگۆڕە');break;
-case'temp':body=field('پلە','a')+`<div class="field"><label>لە</label><select id="from"><option>سیلیزی</option><option>فاهڕەنهایت</option></select></div><div class="field"><label>بۆ</label><select id="to"><option>فاهڕەنهایت</option><option>سیلیزی</option></select></div>`+button('بگۆڕە');break;
-case'password':body=field('درێژی وشەی نهێنی','a','16','number')+button('دروستی بکە');break;
-case'counter':case'case':case'reverse':case'clean':body=area('دەقەکەت بنووسە','a')+button('ئەنجام بدە');break;
-case'json':body=area('JSON بنووسە','a','{"name":"Ali"}')+button('ڕێکی بخە');break;
-case'age':body=field('بەرواری لەدایکبوون','a','','date')+button('تەمەنم بژمێرە');break;
-case'date':body=field('بەرواری یەکەم','a','','date')+field('بەرواری دووەم','b','','date')+button('جیاوازی بدۆزەوە');break;
-case'random':body=field('لە ژمارەی','a','1','number')+field('تا ژمارەی','b','100','number')+button('ژمارە هەڵبژێرە');break;
-case'coin':body=button('دراوەکە فڕێ بدە');break;
-case'color':body=`<div class="field"><label>ڕەنگ هەڵبژێرە</label><input id="a" type="color" value="#8b5cf6"></div>`+button('کۆپی کۆدی ڕەنگ');break;
-case'username':body=field('ناو یان وشەی دڵخواز','a')+button('ناو دروست بکە');break;
-case'hashtags':body=field('بابەت','a','وەرزش، تەکنەلۆژیا...')+button('هاشتاگ دروست بکە');break;
+
+function openTool(id){
+  if(timerInterval){clearInterval(timerInterval);timerInterval=null;}
+  let x=data.find(a=>a.id===id);if(!x)return;active=id;
+  let body='';
+  switch(id){
+    // ئامرازە کۆنەکان
+    case'calc':body=field('ژمارەی یەکەم','a')+field('کردار (+ − × ÷)','op','+ or -')+field('ژمارەی دووەم','b')+button('هەژمار بکە');break;
+    case'percent':body=field('ژمارە','a')+field('چەند لە سەد؟','b')+button('هەژمار بکە');break;
+    case'discount':case'tax':body=field('نرخی سەرەتا','a')+field('ڕێژەی سەدی','b')+button('هەژمار بکە');break;
+    case'length':case'weight':body=field('بڕ','a')+`<div class="field"><label>لە</label><select id="from">${(id==='length'?['مەتەر','کیلۆمەتەر','سانتیمەتەر']:['کیلۆگرام','گرام','پاوەند']).map(v=>`<option>${v}</option>`).join('')}</select></div><div class="field"><label>بۆ</label><select id="to">${(id==='length'?['مەتەر','کیلۆمەتەر','سانتیمەتەر']:['کیلۆگرام','گرام','پاوەند']).map(v=>`<option>${v}</option>`).join('')}</select></div>`+button('بگۆڕە');break;
+    case'temp':body=field('پلە','a')+`<div class="field"><label>لە</label><select id="from"><option>سیلیزی</option><option>فاهڕەنهایت</option></select></div><div class="field"><label>بۆ</label><select id="to"><option>فاهڕەنهایت</option><option>سیلیزی</option></select></div>`+button('بگۆڕە');break;
+    case'password':body=field('درێژی وشەی نهێنی','a','16','number')+button('دروستی بکە');break;
+    case'counter':case'case':case'reverse':case'clean':body=area('دەقەکەت بنووسە','a')+button('ئەنجام بدە');break;
+    case'json':body=area('JSON بنووسە','a','{"name":"Ali"}')+button('ڕێکی بخە');break;
+    case'age':body=field('بەرواری لەدایکبوون','a','','date')+button('تەمەنم بژمێرە');break;
+    case'date':body=field('بەرواری یەکەم','a','','date')+field('بەرواری دووەم','b','','date')+button('جیاوازی بدۆزەوە');break;
+    case'random':body=field('لە ژمارەی','a','1','number')+field('تا ژمارەی','b','100','number')+button('ژمارە هەڵبژێرە');break;
+    case'coin':body=button('دراوەکە فڕێ بدە');break;
+    case'color':body=`<div class="field"><label>ڕەنگ هەڵبژێرە</label><input id="a" type="color" value="#8b5cf6"></div>`+button('کۆپی کۆدی ڕەنگ');break;
+    case'username':body=field('ناو یان وشەی دڵخواز','a')+button('ناو دروست بکە');break;
+    case'hashtags':body=field('بابەت','a','وەرزش، تەکنەلۆژیا...')+button('هاشتاگ دروست بکە');break;
+
+    // ئامرازە نوێیەکان
+    case'receipt':
+      body=`<div class="grid2">
+        ${field('ناوی کۆمپانیا / فرۆشگا','r_comp','کۆمپانیای نموونە','text','ئامرازەکانی من Pro')}
+        ${field('ژمارەی وەسڵ','r_num','','text','REC-'+Math.floor(1000+Math.random()*9000))}
+        ${field('وەرگیرا لە (ناوی کەس)','r_from','ناوی کڕیار یان کەسەکە')}
+        ${field('جۆری مامەڵە','r_type','','text','وەسڵی وەرگرتنی پارە')}
+        ${field('بڕی پارە','r_amt','250000','number')}
+        <div class="field"><label>دراو</label><select id="r_cur"><option>دیناری عێراقی (IQD)</option><option>دۆلاری ئەمریکی ($)</option></select></div>
+        ${field('شێوازی پارەدان','r_pay','','text','نەقد (کاش)')}
+        ${field('بەروار','r_date','','date',new Date().toISOString().slice(0,10))}
+      </div>
+      ${field('لە بری (تێبینی و هۆکار)','r_note','بۆ نموونە: قیستی یەکەم یان کڕینی کاڵا')}
+      <div class="btn-row"><button class="primary" id="runTool">دروستکردنی وەسڵ</button><button class="btn" onclick="window.print()">🖨️ چاپکردن / PDF</button></div>`;
+      break;
+
+    case'invoice':
+      body=`<div class="grid3">
+        ${field('ناوی فرۆشگا','i_shop','','text','فرۆشگای مۆدێرن')}
+        ${field('ناوی کڕیار','i_cust','ناوی کڕیار')}
+        ${field('ژمارەی فاکتۆر','i_num','','text','INV-'+Math.floor(1000+Math.random()*9000))}
+      </div>
+      <div id="invItems"></div>
+      <div class="btn-row" style="margin-bottom:12px">
+        <button class="btn sm" id="addInvRow">+ زیادکردنی کاڵا</button>
+      </div>
+      <div class="grid2">
+        ${field('داشکاندن (بڕی پارە)','i_disc','0','number','0')}
+        <div class="field"><label>دراو</label><select id="i_cur"><option>IQD</option><option>$</option></select></div>
+      </div>
+      <div class="btn-row"><button class="primary" id="runTool">دروستکردنی فاکتۆر</button><button class="btn" onclick="window.print()">🖨️ چاپکردن / PDF</button></div>`;
+      break;
+
+    case'pnl':
+      body=`<div class="grid2">
+        ${field('کۆی داهات / فرۆشتن','p_rev','1000000','number')}
+        ${field('تێچووی کاڵا (COGS)','p_cogs','600000','number')}
+        ${field('کرێی شوێن و کارەبا','p_rent','100000','number')}
+        ${field('مووچەی کارمەندان','p_sal','150000','number')}
+        ${field('خەرجی تر و ڕیکلام','p_oth','50000','number')}
+      </div>`+button('هەژمارکردنی قازانج و زیان');
+      break;
+
+    case'installment':
+      body=`<div class="grid3">
+        ${field('کۆی نرخی کاڵا یان قەرز','in_total','1200000','number')}
+        ${field('پێشەکی دراو','in_down','200000','number','0')}
+        ${field('ژمارەی مانگەکان','in_months','10','number','6')}
+        ${field('ڕێژەی زیادە / سوود (%)','in_rate','0','number','0')}
+        ${field('بەرواری دەستپێک','in_start','','date',new Date().toISOString().slice(0,10))}
+      </div>`+button('هەژمارکردنی خشتەی قیست');
+      break;
+
+    case'currency':
+      body=`<div class="grid3">
+        ${field('بڕی پارە','c_amt','100','number','100')}
+        <div class="field"><label>لە دراوی</label><select id="c_from"><option value="USD">دۆلاری ئەمریکی (USD)</option><option value="IQD">دیناری عێراقی (IQD)</option><option value="EUR">یۆرۆ (EUR)</option><option value="GBP">پاوەندی بەریتانی (GBP)</option><option value="TRY">لیرەی تورکی (TRY)</option></select></div>
+        <div class="field"><label>بۆ دراوی</label><select id="c_to"><option value="IQD">دیناری عێراقی (IQD)</option><option value="USD">دۆلاری ئەمریکی (USD)</option><option value="EUR">یۆرۆ (EUR)</option><option value="GBP">پاوەندی بەریتانی (GBP)</option><option value="TRY">لیرەی تورکی (TRY)</option></select></div>
+      </div>
+      ${field('نرخی ١٠٠ دۆلار بە دینار (دەتوانیت بیگۆڕیت)','c_iqd_rate','150000','number','150000')}
+      `+button('گۆڕینی دراو');
+      break;
+
+    case'salary':
+      body=`<div class="grid2">
+        ${field('مووچەی بنەڕەتی','s_base','750000','number')}
+        ${field('پاداشت و دەرماڵە','s_bonus','50000','number','0')}
+        ${field('کاتژمێری کاری زیادە (Overtime)','s_ot_hrs','0','number','0')}
+        ${field('نرخی یەک کاتژمێری زیادە','s_ot_rate','5000','number','5000')}
+        ${field('ڕۆژانی نەهاتن (غیاب)','s_abs','0','number','0')}
+        ${field('پێشینە / قەرزی لێبڕاو','s_ded','0','number','0')}
+      </div>`+button('هەژمارکردنی مووچەی سافی');
+      break;
+
+    case'qrcode':
+      body=`<div class="grid2">
+        <div class="field"><label>جۆری ناوەڕۆک</label><select id="qr_type"><option value="text">دەق یان لینک (URL)</option><option value="wifi">تۆڕی Wi-Fi</option><option value="wa">نامەی WhatsApp</option></select></div>
+        ${field('قەبارە (پیکسڵ)','qr_size','240','number','240')}
+      </div>
+      <div id="qrFields">${field('دەق یان لینک بنووسە','qr_val','https://example.com')}</div>
+      <div class="btn-row"><button class="primary" id="runTool">دروستکردنی QR Code</button><button class="btn" id="dlQr" style="display:none">⬇️ داگرتنی وێنە (PNG)</button></div>`;
+      break;
+
+    case'barcode':
+      body=`<div class="grid2">
+        ${field('کۆد یان ژمارەی کاڵا (ئینگلیزی/ژمارە)','bc_val','PRO-2026-8841','text','PRO-2026-8841')}
+        ${field('ناونیشانی ژێر بارکۆد (ئارەزوومەندانە)','bc_lbl','ئامرازەکانی من Pro')}
+      </div>
+      <div class="btn-row"><button class="primary" id="runTool">دروستکردنی بارکۆد</button><button class="btn" id="dlBc" style="display:none">⬇️ داگرتنی بارکۆد (PNG)</button></div>`;
+      break;
+
+    case'inventory':
+      body=`<div class="grid2">
+        ${field('ناوی کاڵا','inv_name','بۆ نموونە: لاپتۆپ Dell')}
+        ${field('کۆد / SKU','inv_sku','ITM-01')}
+        ${field('بڕی بەردەست لە کۆگا','inv_qty','10','number')}
+        ${field('نرخی کڕین','inv_buy','500000','number')}
+        ${field('نرخی فرۆشتن','inv_sell','620000','number')}
+        ${field('سنووری ئاگادارکردنەوەی کەمبوون','inv_min','3','number','3')}
+      </div>
+      <button class="primary" id="addInvItem">+ زیادکردن بۆ کۆگا</button>
+      <div id="invListArea"></div>`;
+      break;
+
+    case'employees':
+      body=`<div class="grid2">
+        ${field('ناوی تەواوی کارمەند','emp_name','ئەحمەد محەمەد')}
+        ${field('ناونیشانی کار / بەش','emp_role','فرۆشیار')}
+        ${field('ژمارەی مۆبایل','emp_phone','0750 000 0000')}
+        ${field('مووچەی مانگانە','emp_sal','700000','number')}
+      </div>
+      <button class="primary" id="addEmpBtn">+ تۆمارکردنی کارمەند</button>
+      <div id="empListArea"></div>`;
+      break;
+
+    case'finreport':
+      body=`<div class="grid3">
+        <div class="field"><label>جۆر</label><select id="fr_type"><option value="in">داهات (+)</option><option value="out">خەرجی (-)</option></select></div>
+        ${field('بڕی پارە','fr_amt','50000','number')}
+        ${field('پۆلێن / هۆکار','fr_cat','فرۆشتن، کرێ، کڕین...')}
+      </div>
+      <button class="primary" id="addFrBtn">+ تۆمارکردن لە ڕاپۆرت</button>
+      <div id="frListArea"></div>`;
+      break;
+
+    case'notes':
+      body=`${field('سەردێڕی تێبینی','nt_title','تێبینی نوێ')}
+      ${area('ناوەڕۆکی تێبینی','nt_body','لێرە تێبینییەکانت بنووسە...')}
+      <button class="primary" id="addNoteBtn">💾 پاشەکەوتکردنی تێبینی</button>
+      <div id="notesListArea"></div>`;
+      break;
+
+    case'tasks':
+      body=`<div class="grid3">
+        ${field('ئەرکی نوێ','tk_text','پەیوەندیکردن بە کڕیار...')}
+        <div class="field"><label>ئاستی گرنگی</label><select id="tk_prio"><option value="بەرز">🔴 گرنگی بەرز</option><option value="مامناوەند" selected>🟡 مامناوەند</option><option value="نزم">🟢 نزم</option></select></div>
+        <div class="field"><label>&nbsp;</label><button class="primary" id="addTaskBtn" style="width:100%">+ زیادکردنی ئەرک</button></div>
+      </div>
+      <div id="tasksListArea"></div>`;
+      break;
+
+    case'timer':
+      body=`<div class="btn-row" style="justify-content:center">
+        <button class="chip active" data-tmode="countdown">⏳ تایمەری پێچەوانە</button>
+        <button class="chip" data-tmode="stopwatch">⏱️ ستۆپواچ</button>
+        <button class="chip" data-tmode="pomodoro">🍅 پۆمۆدۆرۆ (٢٥ خولەک)</button>
+      </div>
+      <div id="tmInputs" class="grid2" style="max-width:400px;margin:10px auto">
+        ${field('خولەک','tm_min','5','number','5')}
+        ${field('چرکە','tm_sec','0','number','0')}
+      </div>
+      <div class="timer-big" id="tmDisplay">05:00</div>
+      <div class="btn-row" style="justify-content:center">
+        <button class="primary" id="tmStart">▶ دەستپێکردن</button>
+        <button class="btn" id="tmPause">⏸ وەستان</button>
+        <button class="btn" id="tmReset">↻ سفرکردنەوە</button>
+      </div>`;
+      break;
+
+    case'passcheck':
+      body=`${field('وشەی نهێنی بنووسە بۆ پشکنین','pc_inp','وشەی نهێنییەکەت لێرە بنووسە...')}
+      <div class="bar-wrap"><div class="bar-fill" id="pc_bar" style="width:0%;background:var(--err)"></div></div>
+      <div id="pc_live" class="small">ئاستی پاراستن: چاوەڕوانی نووسین...</div>`;
+      break;
+
+    case'imgcompress':
+      body=`<div class="grid2">
+        <div class="field"><label>وێنە هەڵبژێرە</label><input id="ic_file" type="file" accept="image/*"></div>
+        <div class="field"><label>کوالێتی وێنە: <span id="ic_qval">70%</span></label><input id="ic_qual" type="range" min="10" max="95" value="70"></div>
+      </div>
+      <div class="grid2">
+        ${field('زۆرترین پانی (پیکسڵ - ئارەزوومەندانە)','ic_maxw','1280','number','1280')}
+        <div class="field"><label>فۆرماتی دەرچوون</label><select id="ic_fmt"><option value="image/jpeg">JPEG (قەبارەی زۆر کەم)</option><option value="image/webp">WebP (مۆدێرن و خێرا)</option></select></div>
+      </div>
+      <button class="primary" id="runTool">کەمکردنەوەی قەبارەی وێنە</button>`;
+      break;
+
+    case'logo':
+      body=`<div class="grid2">
+        ${field('ناوی براند / لۆگۆ','lg_name','PRO TOOLS','text','ئامرازەکانی من')}
+        ${field('دروشم (Slogan - ئارەزوومەندانە)','lg_sub','داهێنان و خێرایی','text','داهێنان و خێرایی')}
+        <div class="field"><label>ئایکۆن هەڵبژێرە</label><select id="lg_ico">
+          <option value="✦">✦ ئەستێرە</option><option value="💎">💎 ئەڵماس</option><option value="🚀">🚀 مووشەک</option>
+          <option value="👑">👑 تاج</option><option value="⚡">⚡ هەورەبروسکە</option><option value="🛡️">🛡️ قەڵغان</option>
+          <option value="🌿">🌿 سروشت</option><option value="🛒">🛒 بازاڕ</option><option value="☕">☕ قاوە</option><option value="💻">💻 تەکنەلۆژیا</option>
+        </select></div>
+        <div class="field"><label>شێوازی باکگراوند</label><select id="lg_style"><option value="grad1">مۆر و شین</option><option value="grad2">زێڕین و ڕەش</option><option value="grad3">سەوز و فیروزەیی</option><option value="grad4">سوور و پرتەقاڵی</option></select></div>
+      </div>
+      <div class="btn-row"><button class="primary" id="runTool">دروستکردنی لۆگۆ</button><button class="btn" id="dlLogo" style="display:none">⬇️ داگرتنی لۆگۆ (PNG)</button></div>`;
+      break;
+
+    case'base64':
+      body=`<div class="field"><label>جۆری کردار</label><select id="b64_mode"><option value="enc">گۆڕینی دەق بۆ Base64 (Encode)</option><option value="dec">گۆڕینی Base64 بۆ دەق (Decode)</option></select></div>
+      ${area('دەق یان کۆدی Base64 بنووسە','b64_inp','سڵاو کوردستان...')}
+      `+button('جێبەجێکردن');
+      break;
+
+    case'shortener':
+      body=`${field('لینکە درێژەکەت لێرە دابنێ','sh_url','https://example.com/very/long/url/path')}
+      ${field('ناوی کورتکراوەی دڵخواز (ئارەزوومەندانە)','sh_alias','promo26')}
+      <button class="primary" id="runTool">کورتکردنەوەی لینک</button>
+      <div id="shListArea"></div>`;
+      break;
+
+    case'listmaker':
+      body=`${area('هەر بڕگەیەک لە دێڕێکدا بنووسە','lm_inp','سێو\nمۆز\nپرتەقاڵ\nسێو')}
+      <div class="btn-row">
+        <button class="primary" data-lm="num">1. ژمارەدانان</button>
+        <button class="btn" data-lm="bullet">• خاڵبەندی</button>
+        <button class="btn" data-lm="sort">↓ ڕیزکردن (ئەلفوبێ)</button>
+        <button class="btn" data-lm="dedup">🧹 لابردنی دووبارە</button>
+        <button class="btn" data-lm="csv">، گۆڕین بۆ Comma</button>
+      </div>`;
+      break;
+
+    case'area':
+      body=`<div class="field"><label>شێوەی ئەندازەیی هەڵبژێرە</label><select id="ar_shape">
+        <option value="rect">لاکێشە (درێژی × پانی)</option>
+        <option value="square">چوارگۆشە (لا × لا)</option>
+        <option value="circle">بازنە (نیوەتیرە)</option>
+        <option value="triangle">سێگۆشە (بنکە و بەرزی)</option>
+      </select></div>
+      <div id="ar_fields" class="grid2">
+        ${field('درێژی (مەتر)','ar_a','10','number')}
+        ${field('پانی (مەتر)','ar_b','5','number')}
+      </div>
+      `+button('هەژمارکردنی ڕووبەر و چێوە');
+      break;
+
+    case'brandname':
+      body=`<div class="grid2">
+        ${field('وشەی سەرەکی یان بوار','bn_kw','تەکنەلۆژیا، قاوە، جلوبەرگ، کورد...')}
+        <div class="field"><label>شێواز</label><select id="bn_style"><option value="modern">مۆدێرن و جیهانی</option><option value="kurdish">کوردی و ڕەسەن</option><option value="lux">شاهانە و کلاسیک</option></select></div>
+      </div>`+button('پێشنیارکردنی ناوی براند');
+      break;
+
+    case'bio':
+      body=`<div class="grid2">
+        ${field('ناو یان نازناو','bio_name','ئاریان')}
+        ${field('پیشە یان بوار','bio_job','دیزاینەر و گەشەپێدەری وێب')}
+        ${field('شار / شوێن','bio_city','هەولێر')}
+        <div class="field"><label>شێوازی بایۆ</label><select id="bio_tone"><option value="pro">پرۆفیشناڵ و فەرمی</option><option value="creative">داهێنەرانە و سەرنجڕاکێش</option><option value="simple">کورت و سادە</option></select></div>
+      </div>`+button('دروستکردنی بایۆ');
+      break;
+
+    case'msgmaker':
+      body=`<div class="grid2">
+        <div class="field"><label>جۆری نامە</label><select id="ms_type">
+          <option value="offer">پێشکەشکردنی ئۆفەر و داشکاندن بە کڕیار</option>
+          <option value="thanks">سوپاسنامە دوای کڕین</option>
+          <option value="remind">بیرهێنانەوەی قەرز یان قیست بە نەرمی</option>
+          <option value="job">داواکاری کار (CV)</option>
+          <option value="congrats">پیرۆزبایی جەژن و بۆنەکان</option>
+        </select></div>
+        ${field('ناوی وەرگر / کڕیار','ms_to','بەڕێز کاک کاروان')}
+        ${field('ناوی نێرەر / کۆمپانیا','ms_from','ئامرازەکانی من Pro')}
+        ${field('زانیاری زیادە (بڕ، کاڵا، یان کات)','ms_extra','٢٠٪ داشکاندن تا کۆتایی هەفتە')}
+      </div>`+button('ئامادەکردنی نامە');
+      break;
+
+    case'emailcheck':
+      body=`${field('ناونیشانی ئیمەیڵ بنووسە','em_inp','user@example.com')}`+button('پشکنینی ئیمەیڵ');
+      break;
+
+    case'games':
+      body=`<div class="btn-row" style="justify-content:center;margin-bottom:14px">
+        <button class="chip active" data-gmode="xo">❌⭕ یاری X-O (بەرامبەر کۆمپیوتەر)</button>
+        <button class="chip" data-gmode="mem">🧠 یاری بیرەوەری (Memory)</button>
+        <button class="chip" data-gmode="guess">🔢 مەتەڵی ژمارە (١ تا ١٠٠)</button>
+      </div>
+      <div id="gameArea"></div>`;
+      break;
+  }
+
+  $('#toolTitle').textContent=x.ico+' '+x.name;
+  $('#toolBody').innerHTML=body+'<div class="result" id="result" style="display:none"></div>';
+  $('#workspace').classList.add('show');
+  put('proHist',[id,...get('proHist').filter(v=>v!==id)].slice(0,30));
+  render();
+  initToolExtras(id);
+  $('#workspace').scrollIntoView({behavior:'smooth',block:'start'});
 }
-$('#toolTitle').textContent=x.ico+' '+x.name;$('#toolBody').innerHTML=body+'<div class="result" id="result" style="display:none"></div>';$('#workspace').classList.add('show');put('proHist',[id,...get('proHist').filter(v=>v!==id)].slice(0,30));render();$('#workspace').scrollIntoView({behavior:'smooth',block:'start'});
+
+function initToolExtras(id){
+  if(id==='invoice'){
+    const addRow=(name='',qty=1,price='')=>{
+      let d=document.createElement('div');
+      d.className='grid3 inv-row';
+      d.style.marginBottom='8px';
+      d.innerHTML=`<input class="inv-n" placeholder="ناوی کاڵا" value="${escapeHtml(name)}" style="padding:10px;border:1px solid var(--line);border-radius:10px;background:#0b1426;color:var(--text)">
+      <input class="inv-q" type="number" placeholder="دانە" value="${qty}" style="padding:10px;border:1px solid var(--line);border-radius:10px;background:#0b1426;color:var(--text)">
+      <div style="display:flex;gap:6px"><input class="inv-p" type="number" placeholder="نرخ" value="${price}" style="width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;background:#0b1426;color:var(--text)"><button class="btn danger sm rm-row">✕</button></div>`;
+      $('#invItems').appendChild(d);
+    };
+    addRow('کاڵای یەکەم',1,25000);
+    $('#addInvRow').onclick=()=>addRow();
+    $('#invItems').onclick=e=>{if(e.target.classList.contains('rm-row')&&document.querySelectorAll('.inv-row').length>1)e.target.closest('.inv-row').remove();};
+  }
+  if(id==='qrcode'){
+    $('#qr_type').onchange=()=>{
+      let t=$('#qr_type').value;
+      if(t==='wifi')$('#qrFields').innerHTML=`<div class="grid2">${field('ناوی تۆڕ (SSID)','qr_ssid','MyWiFi')}${field('وشەی نهێنی','qr_pass','12345678')}</div>`;
+      else if(t==='wa')$('#qrFields').innerHTML=`<div class="grid2">${field('ژمارەی مۆبایل (بە کۆدی وڵات)','qr_phone','9647500000000')}${field('دەقی نامە','qr_wamsg','سڵاو')}</div>`;
+      else $('#qrFields').innerHTML=field('دەق یان لینک بنووسە','qr_val','https://example.com');
+    };
+  }
+  if(id==='inventory'){renderInventory();}
+  if(id==='employees'){renderEmployees();}
+  if(id==='finreport'){renderFinReport();}
+  if(id==='notes'){renderNotes();}
+  if(id==='tasks'){renderTasks();}
+  if(id==='shortener'){renderShortLinks();}
+  if(id==='timer'){initTimer();}
+  if(id==='passcheck'){
+    $('#pc_inp').oninput=()=>{
+      let p=$('#pc_inp').value,score=0,tips=[];
+      if(p.length>=8)score+=25;else tips.push('لانیکەم ٨ پیت بێت');
+      if(p.length>=12)score+=15;
+      if(/[A-Z]/.test(p))score+=20;else tips.push('پیتی گەورەی ئینگلیزی (A-Z) زیاد بکە');
+      if(/[a-z]/.test(p))score+=15;else tips.push('پیتی بچووک (a-z) زیاد بکە');
+      if(/[0-9]/.test(p))score+=15;else tips.push('ژمارە (0-9) زیاد بکە');
+      if(/[^A-Za-z0-9]/.test(p))score+=10;else tips.push('هێمای تایبەت (!@#$%) زیاد بکە');
+      if(!p)score=0;
+      let col=score<40?'var(--err)':score<75?'var(--warn)':'var(--ok)';
+      let lbl=score===0?'بەتاڵ':score<40?'لاواز 🔴':score<75?'مامناوەند 🟡':'زۆر بەهێز 🟢';
+      $('#pc_bar').style.width=score+'%';$('#pc_bar').style.background=col;
+      $('#pc_live').innerHTML=`ئاستی پاراستن: <strong>${lbl} (${score}%)</strong>`+(tips.length&&p?`<br>پێشنیار: ${tips.join(' • ')}`:'');
+    };
+  }
+  if(id==='imgcompress'){
+    $('#ic_qual').oninput=()=>$('#ic_qval').textContent=$('#ic_qual').value+'%';
+  }
+  if(id==='area'){
+    $('#ar_shape').onchange=()=>{
+      let s=$('#ar_shape').value;
+      if(s==='rect')$('#ar_fields').innerHTML=field('درێژی (مەتر)','ar_a','10','number')+field('پانی (مەتر)','ar_b','5','number');
+      else if(s==='square')$('#ar_fields').innerHTML=field('درێژی لا (مەتر)','ar_a','6','number');
+      else if(s==='circle')$('#ar_fields').innerHTML=field('نیوەتیرە (مەتر)','ar_a','4','number');
+      else $('#ar_fields').innerHTML=field('بنکە (مەتر)','ar_a','8','number')+field('بەرزی (مەتر)','ar_b','5','number');
+    };
+  }
+  if(id==='listmaker'){
+    document.querySelectorAll('[data-lm]').forEach(btn=>{
+      btn.onclick=()=>{
+        let lines=$('#lm_inp').value.split('\n').map(s=>s.trim()).filter(Boolean);
+        let m=btn.dataset.lm,res='';
+        if(m==='num')res=lines.map((l,i)=>`${i+1}. ${l}`).join('\n');
+        if(m==='bullet')res=lines.map(l=>`• ${l}`).join('\n');
+        if(m==='sort')res=[...lines].sort((a,b)=>a.localeCompare(b)).join('\n');
+        if(m==='dedup')res=[...new Set(lines)].join('\n');
+        if(m==='csv')res=lines.join('، ');
+        showResult(res,true);
+      };
+    });
+  }
+  if(id==='games'){initGames('xo');}
 }
-function run(){let a=$('#a')?.value??'',b=$('#b')?.value??'',n=Number(a),m=Number(b),r='';
-try{switch(active){
-case'calc':if(!Number.isFinite(n)||!Number.isFinite(m))throw Error('ژمارەی دروست بنووسە');r=({'+' :n+m,'-':n-m,'*':n*m,'×':n*m,'/':m?n/m:'ناتوانرێت بە سفر دابەش بکرێت','÷':m?n/m:'ناتوانرێت بە سفر دابەش بکرێت'})[$('#op').value.trim()]??'کردارەکە هەڵەیە';break;
-case'percent':r=(n*m/100).toLocaleString('en-US');break;
-case'discount':r='نرخی دوای داشکاندن: '+(n-n*m/100).toFixed(2);break;case'tax':r='نرخی لەگەڵ باج: '+(n+n*m/100).toFixed(2);break;
-case'length':{let u={'مەتەر':1,'کیلۆمەتەر':1000,'سانتیمەتەر':.01};r=(n*u[$('#from').value]/u[$('#to').value]).toLocaleString('en-US');break}
-case'weight':{let u={'کیلۆگرام':1,'گرام':.001,'پاوەند':.45359237};r=(n*u[$('#from').value]/u[$('#to').value]).toLocaleString('en-US');break}
-case'temp':r=$('#from').value===$('#to').value?n:$('#from').value==='سیلیزی'?(n*9/5+32):((n-32)*5/9);break;
-case'password':{let chars='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%&*';let len=Math.max(6,Math.min(64,n||16));r=Array.from({length:len},()=>chars[Math.floor(Math.random()*chars.length)]).join('');break}
-case'counter':r=`پیت: ${a.length}\nوشە: ${a.trim()?a.trim().split(/\s+/).length:0}\nڕستە: ${(a.match(/[.!؟?]+/g)||[]).length}`;break;
-case'case':r=a.toUpperCase()+'\n\n'+a.toLowerCase();break;case'reverse':r=[...a].reverse().join('');break;case'clean':r=a.replace(/\s+/g,' ').trim();break;
-case'json':r=JSON.stringify(JSON.parse(a),null,2);break;
-case'age':{let d=new Date(a),now=new Date();if(!a||isNaN(d))throw Error('بەروار هەڵبژێرە');let age=now.getFullYear()-d.getFullYear();if(now.getMonth()<d.getMonth()||(now.getMonth()===d.getMonth()&&now.getDate()<d.getDate()))age--;r='تەمەنت: '+age+' ساڵ';break}
-case'date':{let d1=new Date(a),d2=new Date(b);if(!a||!b||isNaN(d1)||isNaN(d2))throw Error('هەردوو بەروارەکە هەڵبژێرە');r=Math.round(Math.abs(d2-d1)/86400000)+' ڕۆژ';break}
-case'random':if(m<n)throw Error('ژمارەی کۆتایی دەبێت گەورەتر بێت');r=Math.floor(Math.random()*(m-n+1))+n;break;case'coin':r=Math.random()<.5?'🪙 ڕوو':'🪙 پشت';break;
-case'color':r=a;break;case'username':r=a.toLowerCase().trim().replace(/\s+/g,'_')+'_'+Math.floor(10+Math.random()*90);break;
-case'hashtags':r=a.trim().split(/[\s,،]+/).filter(Boolean).map(t=>'#'+t.replace(/[^\p{L}\p{N}_]/gu,'')).join(' ');break;
-}}catch(e){r='هەڵە: '+e.message}
-let out=$('#result');out.style.display='block';out.textContent=String(r);if(active==='password'||active==='json'||active==='color'||active==='hashtags'||active==='reverse'||active==='clean')out.innerHTML='<div>'+escapeHtml(String(r)).replace(/\n/g,'<br>')+'</div><button class="btn" id="copy" style="margin-top:10px">کۆپی بکە</button>';$('#copy')?.addEventListener('click',()=>navigator.clipboard?.writeText(String(r)));
+
+function showResult(htmlOrText,withCopy=false,isHtml=false){
+  let out=$('#result');out.style.display='block';
+  if(isHtml){out.innerHTML=htmlOrText;return;}
+  let txt=String(htmlOrText);
+  if(withCopy){
+    out.innerHTML='<div>'+escapeHtml(txt).replace(/\n/g,'<br>')+'</div><button class="btn sm" id="copy" style="margin-top:10px">📋 کۆپی بکە</button>';
+    $('#copy').onclick=()=>{navigator.clipboard?.writeText(txt);$('#copy').textContent='✓ کۆپی کرا';};
+  }else{
+    out.textContent=txt;
+  }
 }
-function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-document.addEventListener('click',e=>{let t=e.target.closest('[data-tool]');if(t)openTool(t.dataset.tool);let f=e.target.closest('[data-fav]');if(f){let id=f.dataset.fav,v=get('proFav');put('proFav',v.includes(id)?v.filter(x=>x!==id):[...v,id]);render()}let c=e.target.closest('[data-cat]');if(c){category=c.dataset.cat;view='all';render()}let sc=e.target.closest('[data-sidecat]');if(sc){category=sc.dataset.sidecat;view='all';render()}let v=e.target.closest('[data-view]');if(v){view=v.dataset.view;category='هەموو';document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b===v));render()}});
-$('#search').addEventListener('input',render);$('#toolBody').addEventListener('click',e=>{if(e.target.id==='runTool')run()});$('#closeTool').addEventListener('click',()=>$('#workspace').classList.remove('show'));$('#theme').addEventListener('click',()=>{document.body.classList.toggle('light');localStorage.setItem('proLight',document.body.classList.contains('light')?'1':'0')});if(localStorage.getItem('proLight')==='1')document.body.classList.add('light');render();
+
+function run(){
+  let a=$('#a')?.value??'',b=$('#b')?.value??'',n=Number(a),m=Number(b),r='';
+  try{
+    switch(active){
+      // ئامرازە کۆنەکان
+      case'calc':if(!Number.isFinite(n)||!Number.isFinite(m))throw Error('ژمارەی دروست بنووسە');r=({'+':n+m,'-':n-m,'*':n*m,'×':n*m,'/':m?n/m:'ناتوانرێت بە سفر دابەش بکرێت','÷':m?n/m:'ناتوانرێت بە سفر دابەش بکرێت'})[$('#op').value.trim()]??'کردارەکە هەڵەیە';break;
+      case'percent':r=(n*m/100).toLocaleString('en-US');break;
+      case'discount':r='نرخی دوای داشکاندن: '+(n-n*m/100).toFixed(2);break;
+      case'tax':r='نرخی لەگەڵ باج: '+(n+n*m/100).toFixed(2);break;
+      case'length':{let u={'مەتەر':1,'کیلۆمەتەر':1000,'سانتیمەتەر':.01};r=(n*u[$('#from').value]/u[$('#to').value]).toLocaleString('en-US');break}
+      case'weight':{let u={'کیلۆگرام':1,'گرام':.001,'پاوەند':.45359237};r=(n*u[$('#from').value]/u[$('#to').value]).toLocaleString('en-US');break}
+      case'temp':r=$('#from').value===$('#to').value?n:$('#from').value==='سیلیزی'?(n*9/5+32):((n-32)*5/9);break;
+      case'password':{let chars='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%&*';let len=Math.max(6,Math.min(64,n||16));r=Array.from({length:len},()=>chars[Math.floor(Math.random()*chars.length)]).join('');break}
+      case'counter':r=`پیت: ${a.length}\nوشە: ${a.trim()?a.trim().split(/\s+/).length:0}\nڕستە: ${(a.match(/[.!؟?]+/g)||[]).length}`;break;
+      case'case':r=a.toUpperCase()+'\n\n'+a.toLowerCase();break;
+      case'reverse':r=[...a].reverse().join('');break;
+      case'clean':r=a.replace(/\s+/g,' ').trim();break;
+      case'json':r=JSON.stringify(JSON.parse(a),null,2);break;
+      case'age':{let d=new Date(a),now=new Date();if(!a||isNaN(d))throw Error('بەروار هەڵبژێرە');let age=now.getFullYear()-d.getFullYear();if(now.getMonth()<d.getMonth()||(now.getMonth()===d.getMonth()&&now.getDate()<d.getDate()))age--;r='تەمەنت: '+age+' ساڵ';break}
+      case'date':{let d1=new Date(a),d2=new Date(b);if(!a||!b||isNaN(d1)||isNaN(d2))throw Error('هەردوو بەروارەکە هەڵبژێرە');r=Math.round(Math.abs(d2-d1)/86400000)+' ڕۆژ';break}
+      case'random':if(m<n)throw Error('ژمارەی کۆتایی دەبێت گەورەتر بێت');r=Math.floor(Math.random()*(m-n+1))+n;break;
+      case'coin':r=Math.random()<.5?'🪙 ڕوو':'🪙 پشت';break;
+      case'color':r=a;break;
+      case'username':r=a.toLowerCase().trim().replace(/\s+/g,'_')+'_'+Math.floor(10+Math.random()*90);break;
+      case'hashtags':r=a.trim().split(/[\s,،]+/).filter(Boolean).map(t=>'#'+t.replace(/[^\p{L}\p{N}_]/gu,'')).join(' ');break;
+
+      // ئامرازە نوێیەکان
+      case'receipt':{
+        let amt=Number($('#r_amt').value||0);
+        if(amt<=0)throw Error('تکایە بڕی پارەی دروست بنووسە');
+        let html=`<div class="paper">
+          <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #0f172a;padding-bottom:10px">
+            <div><h4>${escapeHtml($('#r_comp').value||'وەسڵی فەرمی')}</h4><div style="font-size:13px;color:#475569">${escapeHtml($('#r_type').value)}</div></div>
+            <div style="text-align:left;font-size:13px"><strong>ژمارە:</strong> ${escapeHtml($('#r_num').value)}<br><strong>بەروار:</strong> ${escapeHtml($('#r_date').value)}</div>
+          </div>
+          <div style="margin:16px 0;line-height:2;font-size:15px">
+            <div><strong>وەرگیرا لە بەڕێز:</strong> ${escapeHtml($('#r_from').value||'---')}</div>
+            <div><strong>بڕی پارە:</strong> <span style="background:#f1f5f9;padding:3px 10px;border-radius:6px;font-weight:800">${fmt(amt)} ${escapeHtml($('#r_cur').value)}</span></div>
+            <div><strong>شێوازی پارەدان:</strong> ${escapeHtml($('#r_pay').value)}</div>
+            <div><strong>لە بری:</strong> ${escapeHtml($('#r_note').value||'---')}</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:34px;padding-top:12px;border-top:1px dashed #94a3b8;font-size:13px;color:#475569">
+            <span>واژۆی وەرگر: ............................</span>
+            <span>مۆر و واژۆی فرۆشگا: ............................</span>
+          </div>
+        </div>`;
+        showResult(html,false,true);return;
+      }
+
+      case'invoice':{
+        let rows=[...document.querySelectorAll('.inv-row')].map(el=>({
+          n:el.querySelector('.inv-n').value||'کاڵا',
+          q:Number(el.querySelector('.inv-q').value||0),
+          p:Number(el.querySelector('.inv-p').value||0)
+        })).filter(x=>x.q>0);
+        if(!rows.length)throw Error('لانیکەم یەک کاڵا بە بڕی دروست زیاد بکە');
+        let sub=rows.reduce((s,x)=>s+x.q*x.p,0);
+        let disc=Number($('#i_disc').value||0);
+        let tot=Math.max(0,sub-disc);
+        let cur=$('#i_cur').value;
+        let html=`<div class="paper">
+          <div style="display:flex;justify-content:space-between;border-bottom:2px solid #0f172a;padding-bottom:10px">
+            <div><h4>${escapeHtml($('#i_shop').value)}</h4><div style="font-size:13px;color:#475569">کڕیار: ${escapeHtml($('#i_cust').value||'کڕیاری گشتی')}</div></div>
+            <div style="text-align:left;font-size:13px"><strong>فاکتۆر:</strong> ${escapeHtml($('#i_num').value)}<br><strong>بەروار:</strong> ${new Date().toLocaleDateString('en-GB')}</div>
+          </div>
+          <table>
+            <thead><tr><th>#</th><th>ناوی کاڵا</th><th>دانە</th><th>نرخی تاک</th><th>کۆی گشتی</th></tr></thead>
+            <tbody>${rows.map((x,i)=>`<tr><td>${i+1}</td><td>${escapeHtml(x.n)}</td><td>${x.q}</td><td>${fmt(x.p)} ${cur}</td><td>${fmt(x.q*x.p)} ${cur}</td></tr>`).join('')}</tbody>
+          </table>
+          <div style="text-align:left;font-size:14px;line-height:1.9">
+            <div>کۆی سەرەتایی: <strong>${fmt(sub)} ${cur}</strong></div>
+            <div>داشکاندن: <strong>${fmt(disc)} ${cur}</strong></div>
+            <div style="font-size:17px;color:#0f172a">کۆی کۆتایی: <strong>${fmt(tot)} ${cur}</strong></div>
+          </div>
+        </div>`;
+        showResult(html,false,true);return;
+      }
+
+      case'pnl':{
+        let rev=Number($('#p_rev').value||0),cogs=Number($('#p_cogs').value||0),rent=Number($('#p_rent').value||0),sal=Number($('#p_sal').value||0),oth=Number($('#p_oth').value||0);
+        let gross=rev-cogs,opex=rent+sal+oth,net=gross-opex;
+        let margin=rev>0?((net/rev)*100).toFixed(1):0;
+        let status=net>0?'<span class="pill ok">قازانج 📈</span>':net<0?'<span class="pill err">زیان 📉</span>':'<span class="pill warn">یەکسان (Break-even)</span>';
+        let html=`<div class="kpi-grid">
+          <div class="kpi"><span>کۆی داهات</span><strong>${fmt(rev)}</strong></div>
+          <div class="kpi"><span>قازانجی ناپوخت (Gross)</span><strong>${fmt(gross)}</strong></div>
+          <div class="kpi"><span>کۆی خەرجییەکان</span><strong>${fmt(cogs+opex)}</strong></div>
+          <div class="kpi"><span>قازانج / زیانی سافی</span><strong style="color:${net>=0?'var(--ok)':'var(--err)'}">${fmt(net)}</strong></div>
+        </div>
+        <div>ئەنجامی کۆتایی: ${status} &nbsp;|&nbsp; ڕێژەی قازانجی سافی: <strong>${margin}%</strong></div>`;
+        showResult(html,false,true);return;
+      }
+
+      case'installment':{
+        let tot=Number($('#in_total').value||0),down=Number($('#in_down').value||0),mo=Math.max(1,parseInt($('#in_months').value||1)),rate=Number($('#in_rate').value||0);
+        let rem=Math.max(0,tot-down);
+        let withRate=rem+(rem*rate/100);
+        let monthly=withRate/mo;
+        let d0=new Date($('#in_start').value||Date.now());
+        let rows='';
+        for(let i=1;i<=mo;i++){
+          let dt=new Date(d0.getFullYear(),d0.getMonth()+i,d0.getDate());
+          rows+=`<tr><td>قیستی ${i}</td><td>${dt.toISOString().slice(0,10)}</td><td><strong>${fmt(monthly)}</strong></td><td>${fmt(Math.max(0,withRate-monthly*i))}</td></tr>`;
+        }
+        let html=`<div class="kpi-grid">
+          <div class="kpi"><span>بڕی ماوە بۆ قیست</span><strong>${fmt(withRate)}</strong></div>
+          <div class="kpi"><span>قیستی مانگانە</span><strong style="color:var(--b)">${fmt(monthly)}</strong></div>
+          <div class="kpi"><span>ژمارەی قیستەکان</span><strong>${mo} مانگ</strong></div>
+        </div>
+        <div class="tbl-wrap"><table class="tbl"><thead><tr><th>قیست</th><th>بەرواری دانەوە</th><th>بڕی قیست</th><th>ماوەی قەرز</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+        showResult(html,false,true);return;
+      }
+
+      case'currency':{
+        let amt=Number($('#c_amt').value||0),from=$('#c_from').value,to=$('#c_to').value;
+        let iqdPerUsd=(Number($('#c_iqd_rate').value||150000))/100;
+        const ratesToUsd={USD:1,IQD:1/iqdPerUsd,EUR:1.08,GBP:1.27,TRY:1/34.5};
+        let inUsd=amt*ratesToUsd[from];
+        let out=inUsd/ratesToUsd[to];
+        r=`${fmt(amt)} ${from} = ${fmt(out)} ${to}\n(بەپێی نرخی ١٠٠ دۆلار = ${fmt(iqdPerUsd*100)} دینار)`;
+        break;
+      }
+
+      case'salary':{
+        let base=Number($('#s_base').value||0),bonus=Number($('#s_bonus').value||0),otH=Number($('#s_ot_hrs').value||0),otR=Number($('#s_ot_rate').value||0),abs=Number($('#s_abs').value||0),ded=Number($('#s_ded').value||0);
+        let dayRate=base/30;
+        let absDed=abs*dayRate;
+        let otPay=otH*otR;
+        let net=base+bonus+otPay-absDed-ded;
+        let html=`<div class="kpi-grid">
+          <div class="kpi"><span>مووچەی بنەڕەتی + پاداشت</span><strong>${fmt(base+bonus)}</strong></div>
+          <div class="kpi"><span>پارەی کاتی زیادە</span><strong style="color:var(--ok)">+${fmt(otPay)}</strong></div>
+          <div class="kpi"><span>لێبڕینی غیاب و قەرز</span><strong style="color:var(--err)">-${fmt(absDed+ded)}</strong></div>
+          <div class="kpi"><span>مووچەی سافی وەرگیراو</span><strong style="color:var(--b)">${fmt(net)}</strong></div>
+        </div>`;
+        showResult(html,false,true);return;
+      }
+
+      case'qrcode':{
+        let t=$('#qr_type').value,payload='';
+        if(t==='wifi')payload=`WIFI:T:WPA;S:${$('#qr_ssid').value};P:${$('#qr_pass').value};;`;
+        else if(t==='wa')payload=`https://wa.me/${$('#qr_phone').value.replace(/\D/g,'')}?text=${encodeURIComponent($('#qr_wamsg').value)}`;
+        else payload=$('#qr_val').value.trim();
+        if(!payload)throw Error('تکایە ناوەڕۆک بنووسە');
+        let sz=Math.max(120,Math.min(500,Number($('#qr_size').value||240)));
+        let url=`https://api.qrserver.com/v1/create-qr-code/?size=${sz}x${sz}&data=${encodeURIComponent(payload)}`;
+        showResult(`<div style="text-align:center"><img id="qrImg" crossorigin="anonymous" src="${url}" alt="QR Code" style="background:#fff;padding:12px;border-radius:14px;max-width:100%"><div class="small" style="margin-top:8px">${escapeHtml(payload)}</div></div>`,false,true);
+        let dl=$('#dlQr');dl.style.display='inline-block';
+        dl.onclick=async()=>{
+          try{
+            let res=await fetch(url);let blob=await res.blob();
+            let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='qrcode.png';a.click();
+          }catch{window.open(url,'_blank');}
+        };
+        return;
+      }
+
+      case'barcode':{
+        let val=$('#bc_val').value.trim();
+        if(!val)throw Error('کۆد بنووسە');
+        let lbl=$('#bc_lbl').value.trim();
+        let cv=document.createElement('canvas');
+        drawCode128(cv,val,lbl);
+        let dataUrl=cv.toDataURL('image/png');
+        showResult(`<div style="text-align:center"><img src="${dataUrl}" style="background:#fff;padding:12px;border-radius:12px;max-width:100%"></div>`,false,true);
+        let dl=$('#dlBc');dl.style.display='inline-block';
+        dl.onclick=()=>{let a=document.createElement('a');a.href=dataUrl;a.download=`barcode-${val}.png`;a.click();};
+        return;
+      }
+
+      case'imgcompress':{
+        let file=$('#ic_file').files[0];
+        if(!file)throw Error('تکایە سەرەتا وێنەیەک هەڵبژێرە');
+        let q=Number($('#ic_qual').value)/100;
+        let maxW=Number($('#ic_maxw').value||1280);
+        let mime=$('#ic_fmt').value;
+        let reader=new FileReader();
+        reader.onload=e=>{
+          let img=new Image();
+          img.onload=()=>{
+            let w=img.width,h=img.height;
+            if(maxW>0&&w>maxW){h=Math.round(h*(maxW/w));w=maxW;}
+            let cv=document.createElement('canvas');cv.width=w;cv.height=h;
+            cv.getContext('2d').drawImage(img,0,0,w,h);
+            let outUrl=cv.toDataURL(mime,q);
+            let newBytes=Math.round((outUrl.length*3)/4);
+            let saved=Math.max(0,Math.round((1-newBytes/file.size)*100));
+            let ext=mime==='image/webp'?'webp':'jpg';
+            showResult(`<div class="kpi-grid">
+              <div class="kpi"><span>قەبارەی پێشوو</span><strong>${(file.size/1024).toFixed(1)} KB</strong></div>
+              <div class="kpi"><span>قەبارەی نوێ</span><strong style="color:var(--ok)">${(newBytes/1024).toFixed(1)} KB</strong></div>
+              <div class="kpi"><span>کەمکردنەوە</span><strong style="color:var(--b)">${saved}%</strong></div>
+            </div>
+            <div style="text-align:center"><img src="${outUrl}" style="max-height:220px;border-radius:10px;margin:8px 0"><br>
+            <a class="primary" href="${outUrl}" download="compressed.${ext}" style="display:inline-block;text-decoration:none;margin-top:8px">⬇️ داگرتنی وێنە نوێیەکە</a></div>`,false,true);
+          };
+          img.src=e.target.result;
+        };
+        reader.readAsDataURL(file);
+        return;
+      }
+
+      case'logo':{
+        let name=$('#lg_name').value.trim()||'BRAND';
+        let sub=$('#lg_sub').value.trim();
+        let ico=$('#lg_ico').value;
+        let st=$('#lg_style').value;
+        let cv=document.createElement('canvas');cv.width=500;cv.height=500;
+        let ctx=cv.getContext('2d');
+        let g=ctx.createLinearGradient(0,0,500,500);
+        if(st==='grad1'){g.addColorStop(0,'#4c1d95');g.addColorStop(1,'#0e7490');}
+        else if(st==='grad2'){g.addColorStop(0,'#18181b');g.addColorStop(1,'#78350f');}
+        else if(st==='grad3'){g.addColorStop(0,'#065f46');g.addColorStop(1,'#0284c7');}
+        else{g.addColorStop(0,'#991b1b');g.addColorStop(1,'#d97706');}
+        ctx.fillStyle=g;
+        ctx.beginPath();ctx.roundRect(20,20,460,460,90);ctx.fill();
+        ctx.strokeStyle='rgba(255,255,255,0.25)';ctx.lineWidth=6;ctx.stroke();
+        ctx.font='110px sans-serif';ctx.textAlign='center';ctx.fillStyle='#fff';
+        ctx.fillText(ico,250,220);
+        ctx.font='bold 44px Tahoma, sans-serif';
+        ctx.fillText(name,250,310);
+        if(sub){ctx.font='22px Tahoma, sans-serif';ctx.fillStyle='rgba(255,255,255,0.8)';ctx.fillText(sub,250,360);}
+        let url=cv.toDataURL('image/png');
+        showResult(`<div style="text-align:center"><img src="${url}" style="width:230px;height:230px;border-radius:24px;box-shadow:var(--shadow)"></div>`,false,true);
+        let dl=$('#dlLogo');dl.style.display='inline-block';
+        dl.onclick=()=>{let a=document.createElement('a');a.href=url;a.download='logo.png';a.click();};
+        return;
+      }
+
+      case'base64':{
+        let mode=$('#b64_mode').value,txt=$('#b64_inp').value;
+        if(!txt)throw Error('دەق بنووسە');
+        if(mode==='enc'){
+          const bytes=new TextEncoder().encode(txt);
+          r=btoa(String.fromCharCode(...bytes));
+        }else{
+          const bin=atob(txt.trim());
+          const bytes=Uint8Array.from(bin,c=>c.charCodeAt(0));
+          r=new TextDecoder().decode(bytes);
+        }
+        break;
+      }
+
+      case'shortener':{
+        let url=$('#sh_url').value.trim();
+        if(!url)throw Error('لینک بنووسە');
+        if(!/^https?:\/\//i.test(url))url='https://'+url;
+        let alias=$('#sh_alias').value.trim().replace(/[^a-zA-Z0-9_-]/g,'')||Math.random().toString(36).substring(2,7);
+        let shortUrl=`https://pro.ly/${alias}`;
+        let list=get('proShortLinks');
+        list.unshift({orig:url,short:shortUrl,date:new Date().toLocaleDateString('en-GB')});
+        put('proShortLinks',list.slice(0,20));
+        renderShortLinks();
+        r=`لینکی کورتکراوە ئامادەیە:\n${shortUrl}\n\nئاراستەکراو بۆ:\n${url}`;
+        break;
+      }
+
+      case'area':{
+        let s=$('#ar_shape').value,x1=Number($('#ar_a')?.value||0),x2=Number($('#ar_b')?.value||0);
+        if(x1<=0)throw Error('دوورییەکان دەبێت لە سفر گەورەتر بن');
+        let area=0,perim=0;
+        if(s==='rect'){if(x2<=0)throw Error('پانی بنووسە');area=x1*x2;perim=2*(x1+x2);}
+        else if(s==='square'){area=x1*x1;perim=4*x1;}
+        else if(s==='circle'){area=Math.PI*x1*x1;perim=2*Math.PI*x1;}
+        else{if(x2<=0)throw Error('بەرزی بنووسە');area=0.5*x1*x2;perim=x1+x2+Math.hypot(x1,x2);}
+        r=`ڕووبەر: ${area.toFixed(2)} مەتر دووجا (m²)\nچێوە: ${perim.toFixed(2)} مەتر`;
+        break;
+      }
+
+      case'brandname':{
+        let kw=$('#bn_kw').value.trim()||'کورد';
+        let st=$('#bn_style').value;
+        const pre={modern:['Nova','Pro','Velo','Nex','Zest','Aura','Peak'],kurdish:['زێڕین','ڕۆژ','ئاسۆ','بەهار','چرا','هێز','پێشەنگ'],lux:['Royal','Elite','Crown','Grand','Prime','Luxe','Velvet']}[st];
+        const suf={modern:['Hub','Lab','Zone','Tech','Box','Plus','ify'],kurdish:['ستۆر','پڕۆ','گرووپ','تێک','مارکێت','کۆ','سەنتەر'],lux:['House','Collection','Studio','Club','Empire','Gold','Palace']}[st];
+        let names=[];
+        for(let i=0;i<8;i++){
+          let p=pre[i%pre.length],sf=suf[(i*2)%suf.length];
+          names.push(i%2===0?`${p} ${kw}`:`${kw} ${sf}`);
+        }
+        r=names.map((nm,i)=>`${i+1}. ${nm}`).join('\n');
+        break;
+      }
+
+      case'bio':{
+        let nm=$('#bio_name').value.trim()||'من',jb=$('#bio_job').value.trim()||'داهێنەر',ct=$('#bio_city').value.trim()||'کوردستان',tn=$('#bio_tone').value;
+        if(tn==='pro')r=`💼 ${nm} | ${jb}\n📍 ${ct}\n✨ یارمەتیت دەدەم بۆ گەشەپێدانی کارەکەت\n📩 بۆ پەیوەندی و کار نامە بنێرە`;
+        else if(tn==='creative')r=`🚀 ${nm} ✨\n🎨 ${jb} لە ${ct} 🌍\n💡 بیرۆکەی نوێ، کاری جیاواز\n👇 لینکەکانی خوارەوە ببینە`;
+        else r=`${nm} • ${jb}\n📍 ${ct}\n✨ سادەیی و کوالێتی`;
+        break;
+      }
+
+      case'msgmaker':{
+        let tp=$('#ms_type').value,to=$('#ms_to').value.trim()||'بەڕێز',fr=$('#ms_from').value.trim()||'ئێمە',ex=$('#ms_extra').value.trim();
+        if(tp==='offer')r=`سڵاو ${to}،\nئۆفەرێکی تایبەتمان بۆ ئامادە کردوویت لە لایەن ${fr}!\n${ex?'وردەکاری: '+ex+'\n':''}بۆ سوودمەندبوون هەر ئێستا پەیوەندیمان پێوە بکە.`;
+        else if(tp==='thanks')r=`سوپاس ${to} بۆ متمانە و کڕینەکەت لە ${fr} ❤️\nهیوادارین کاڵاکان بە دڵت بن. ${ex?'\nتێبینی: '+ex:''}`;
+        else if(tp==='remind')r=`سڵاو ${to}، هیوای ڕۆژێکی خۆشت بۆ دەخوازین.\nبە خۆشحاڵییەوە بەبیرت دەهێنینەوە کە کاتی قیست/حیسابەکەت هاتووە لای ${fr}. ${ex?'\nبڕ/وردەکاری: '+ex:''}\nسوپاس بۆ هاوکاریتان.`;
+        else if(tp==='job')r=`بەڕێز ${to}،\nمن ${fr}، ئارەزوومەندم داواکاری پێشکەش بکەم بۆ کارکردن لە تیمە بەڕێزەکەتان. ${ex?'\nشارەزایی: '+ex:''}\nسوپاس بۆ کاتەکەتان.`;
+        else r=`${to}،\nبە بۆنەی هاتنی بۆنە پیرۆزەکانەوە جوانترین پیرۆزباییت ئاراستە دەکەین لە لایەن ${fr} 🌸\n${ex}`;
+        break;
+      }
+
+      case'emailcheck':{
+        let em=$('#em_inp').value.trim();
+        let valid=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em);
+        if(!valid){
+          r=`❌ ئەم ئیمەیڵە هەڵەیە یان ناتەواوە!\nدڵنیابە لە بوونی هێمای @ و ناوی دۆمەین (وەک gmail.com).`;
+        }else{
+          let [user,dom]=em.split('@');
+          let common=['gmail.com','yahoo.com','outlook.com','hotmail.com','icloud.com'].includes(dom.toLowerCase());
+          r=`✅ شێوازی ئیمەیڵەکە دروستە!\n\n• ناوی بەکارهێنەر: ${user}\n• دۆمەین: ${dom}\n• جۆری دۆمەین: ${common?'دۆمەینی ناسراو و جیهانی 🌐':'دۆمەینی تایبەت / کۆمپانیا 🏢'}`;
+        }
+        break;
+      }
+    }
+  }catch(e){r='هەڵە: '+e.message}
+  showResult(r,['password','json','color','hashtags','reverse','clean','base64','shortener','brandname','bio','msgmaker'].includes(active));
+}
+
+// بارکۆد Code128B لەسەر Canvas
+function drawCode128(canvas,text,label){
+  const patterns=["11011001100","11001101100","11001100110","10010011000","10010001100","10001001100","10011001000","10011000100","10001100100","11001001000","11001000100","11000100100","10110011100","10011011100","10011001110","10111001100","10011101100","10011100110","11001110010","11001011100","11001001110","11011100100","11001110100","11101101110","11101001100","11100101100","11100100110","11101100100","11100110100","11100110010","11011011000","11011000110","11000110110","10100011000","10001011000","10001000110","10110001000","10001101000","10001100010","11010001000","11000101000","11000100010","10110111000","10110001110","10001101110","10111011000","10111000110","10001110110","11101110110","11010001110","11000101110","11011101000","11011100010","11011101110","11101011000","11101000110","11100010110","11101101000","11101100010","11100011010","11101111010","11001000010","11110001010","10100110000","10100001100","10010110000","10010000110","10000101100","10000100110","10110010000","10110000100","10011010000","10011000010","10000110100","10000110010","11000010010","11001010000","11110111010","11000010100","10001111010","10100111100","10010111100","10010011110","10111100100","10011110100","10011110010","11110100100","11110010100","11110010010","11011011110","11011110110","11110110110","10101111000","10100011110","10001011110","10111101000","10111100010","11110101000","11110100010","10111011110","10111101110","11101011110","11110101110","11010000100","11010010000","11010011100","1100011101011"];
+  let codes=[104],sum=104;
+  for(let i=0;i<text.length;i++){
+    let c=text.charCodeAt(i)-32;
+    if(c<0||c>94)c=0;
+    codes.push(c);sum+=c*(i+1);
+  }
+  codes.push(sum%103);codes.push(106);
+  let bits=codes.map(c=>patterns[c]).join('');
+  let barW=2,pad=24,w=bits.length*barW+pad*2,h=label?135:115;
+  canvas.width=w;canvas.height=h;
+  let ctx=canvas.getContext('2d');
+  ctx.fillStyle='#fff';ctx.fillRect(0,0,w,h);
+  ctx.fillStyle='#000';
+  for(let i=0;i<bits.length;i++){if(bits[i]==='1')ctx.fillRect(pad+i*barW,14,barW,72);}
+  ctx.font='bold 14px monospace';ctx.textAlign='center';
+  ctx.fillText(text,w/2,104);
+  if(label){ctx.font='12px Tahoma,sans-serif';ctx.fillStyle='#475569';ctx.fillText(label,w/2,124);}
+}
+
+// بەڕێوەبردنی کۆگا
+function renderInventory(){
+  let items=get('proInventory');
+  let totVal=items.reduce((s,x)=>s+x.qty*x.buy,0);
+  let totSell=items.reduce((s,x)=>s+x.qty*x.sell,0);
+  let low=items.filter(x=>x.qty<=x.min).length;
+  $('#invListArea').innerHTML=`
+    <div class="kpi-grid" style="margin-top:16px">
+      <div class="kpi"><span>جۆری کاڵا</span><strong>${items.length}</strong></div>
+      <div class="kpi"><span>بەهای کۆگا (کڕین)</span><strong>${fmt(totVal)}</strong></div>
+      <div class="kpi"><span>بەهای چاوەڕوانکراو (فرۆشتن)</span><strong style="color:var(--ok)">${fmt(totSell)}</strong></div>
+      <div class="kpi"><span>کاڵای کەمبوو</span><strong style="color:${low?'var(--err)':'var(--muted)'}">${low}</strong></div>
+    </div>
+    ${items.length?`<div class="tbl-wrap"><table class="tbl"><thead><tr><th>کاڵا</th><th>SKU</th><th>بڕ</th><th>کڕین</th><th>فرۆشتن</th><th>دۆخ</th><th>کردار</th></tr></thead><tbody>
+    ${items.map((x,i)=>`<tr>
+      <td><strong>${escapeHtml(x.name)}</strong></td><td>${escapeHtml(x.sku)}</td><td><strong>${x.qty}</strong></td><td>${fmt(x.buy)}</td><td>${fmt(x.sell)}</td>
+      <td>${x.qty<=x.min?'<span class="pill err">کەمبووە</span>':'<span class="pill ok">بەردەستە</span>'}</td>
+      <td><button class="btn sm" onclick="chgInv(${i},1)">+</button> <button class="btn sm" onclick="chgInv(${i},-1)">-</button> <button class="btn danger sm" onclick="delInv(${i})">✕</button></td>
+    </tr>`).join('')}</tbody></table></div>`:'<div class="empty">کۆگا بەتاڵە، یەکەم کاڵا زیاد بکە</div>'}`;
+  $('#addInvItem').onclick=()=>{
+    let name=$('#inv_name').value.trim();if(!name)return alert('ناوی کاڵا بنووسە');
+    let list=get('proInventory');
+    list.unshift({name,sku:$('#inv_sku').value||'---',qty:Number($('#inv_qty').value||0),buy:Number($('#inv_buy').value||0),sell:Number($('#inv_sell').value||0),min:Number($('#inv_min').value||3)});
+    put('proInventory',list);$('#inv_name').value='';renderInventory();
+  };
+}
+window.chgInv=(i,d)=>{let l=get('proInventory');if(l[i]){l[i].qty=Math.max(0,l[i].qty+d);put('proInventory',l);renderInventory();}};
+window.delInv=(i)=>{let l=get('proInventory');l.splice(i,1);put('proInventory',l);renderInventory();};
+
+// کارمەندان
+function renderEmployees(){
+  let list=get('proEmployees');
+  let totSal=list.reduce((s,x)=>s+x.sal,0);
+  $('#empListArea').innerHTML=`
+    <div class="kpi-grid" style="margin-top:16px">
+      <div class="kpi"><span>ژمارەی کارمەندان</span><strong>${list.length}</strong></div>
+      <div class="kpi"><span>کۆی مووچەی مانگانە</span><strong style="color:var(--b)">${fmt(totSal)}</strong></div>
+    </div>
+    ${list.length?`<div class="tbl-wrap"><table class="tbl"><thead><tr><th>ناو</th><th>بەش / کار</th><th>مۆبایل</th><th>مووچە</th><th>سڕینەوە</th></tr></thead><tbody>
+    ${list.map((x,i)=>`<tr><td><strong>${escapeHtml(x.name)}</strong></td><td>${escapeHtml(x.role)}</td><td>${escapeHtml(x.phone)}</td><td>${fmt(x.sal)}</td><td><button class="btn danger sm" onclick="delEmp(${i})">✕</button></td></tr>`).join('')}
+    </tbody></table></div>`:'<div class="empty">هیچ کارمەندێک تۆمار نەکراوە</div>'}`;
+  $('#addEmpBtn').onclick=()=>{
+    let name=$('#emp_name').value.trim();if(!name)return alert('ناوی کارمەند بنووسە');
+    let l=get('proEmployees');l.unshift({name,role:$('#emp_role').value||'کارمەند',phone:$('#emp_phone').value||'---',sal:Number($('#emp_sal').value||0)});
+    put('proEmployees',l);$('#emp_name').value='';renderEmployees();
+  };
+}
+window.delEmp=(i)=>{let l=get('proEmployees');l.splice(i,1);put('proEmployees',l);renderEmployees();};
+
+// ڕاپۆرتی دارایی
+function renderFinReport(){
+  let list=get('proFinReport');
+  let inc=list.filter(x=>x.type==='in').reduce((s,x)=>s+x.amt,0);
+  let exp=list.filter(x=>x.type==='out').reduce((s,x)=>s+x.amt,0);
+  let bal=inc-exp;
+  $('#frListArea').innerHTML=`
+    <div class="kpi-grid" style="margin-top:16px">
+      <div class="kpi"><span>کۆی داهات (+)</span><strong style="color:var(--ok)">${fmt(inc)}</strong></div>
+      <div class="kpi"><span>کۆی خەرجی (-)</span><strong style="color:var(--err)">${fmt(exp)}</strong></div>
+      <div class="kpi"><span>باڵانسی ماوە</span><strong style="color:${bal>=0?'var(--b)':'var(--err)'}">${fmt(bal)}</strong></div>
+    </div>
+    ${list.length?`<div class="tbl-wrap"><table class="tbl"><thead><tr><th>جۆر</th><th>پۆلێن</th><th>بڕ</th><th>بەروار</th><th>سڕینەوە</th></tr></thead><tbody>
+    ${list.map((x,i)=>`<tr><td>${x.type==='in'?'<span class="pill ok">داهات</span>':'<span class="pill err">خەرجی</span>'}</td><td>${escapeHtml(x.cat)}</td><td><strong>${fmt(x.amt)}</strong></td><td>${x.date}</td><td><button class="btn danger sm" onclick="delFr(${i})">✕</button></td></tr>`).join('')}
+    </tbody></table></div>`:'<div class="empty">هیچ جووڵەیەکی دارایی تۆمار نەکراوە</div>'}`;
+  $('#addFrBtn').onclick=()=>{
+    let amt=Number($('#fr_amt').value||0);if(amt<=0)return alert('بڕی پارە بنووسە');
+    let l=get('proFinReport');l.unshift({type:$('#fr_type').value,amt,cat:$('#fr_cat').value||'گشتی',date:new Date().toLocaleDateString('en-GB')});
+    put('proFinReport',l);$('#fr_amt').value='';renderFinReport();
+  };
+}
+window.delFr=(i)=>{let l=get('proFinReport');l.splice(i,1);put('proFinReport',l);renderFinReport();};
+
+// تێبینی
+function renderNotes(){
+  let list=get('proNotes');
+  $('#notesListArea').innerHTML=list.length?`<div class="grid2" style="margin-top:16px">${list.map((n,i)=>`<div class="kpi">
+    <div style="display:flex;justify-content:space-between;align-items:center"><strong>${escapeHtml(n.title)}</strong><button class="btn danger sm" onclick="delNote(${i})">✕</button></div>
+    <p style="margin:8px 0;font-size:13px;white-space:pre-wrap">${escapeHtml(n.body)}</p>
+    <span class="small">${n.date}</span>
+  </div>`).join('')}</div>`:'<div class="empty">هیچ تێبینییەک نییە</div>';
+  $('#addNoteBtn').onclick=()=>{
+    let body=$('#nt_body').value.trim();if(!body)return alert('تێبینی بنووسە');
+    let l=get('proNotes');l.unshift({title:$('#nt_title').value.trim()||'بێ سەردێڕ',body,date:new Date().toLocaleString('en-GB')});
+    put('proNotes',l);$('#nt_body').value='';renderNotes();
+  };
+}
+window.delNote=(i)=>{let l=get('proNotes');l.splice(i,1);put('proNotes',l);renderNotes();};
+
+// ڕێکخەری ئەرک
+function renderTasks(){
+  let list=get('proTasks');
+  $('#tasksListArea').innerHTML=list.length?`<div style="display:grid;gap:8px;margin-top:16px">${list.map((t,i)=>`<div class="kpi" style="display:flex;justify-content:space-between;align-items:center;opacity:${t.done?.6:1}">
+    <div style="display:flex;align-items:center;gap:10px">
+      <input type="checkbox" ${t.done?'checked':''} onchange="togTask(${i})" style="width:18px;height:18px;cursor:pointer">
+      <span style="text-decoration:${t.done?'line-through':'none'}">${escapeHtml(t.text)}</span>
+      <span class="pill ${t.prio==='بەرز'?'err':t.prio==='مامناوەند'?'warn':'ok'}">${t.prio}</span>
+    </div>
+    <button class="btn danger sm" onclick="delTask(${i})">✕</button>
+  </div>`).join('')}</div>`:'<div class="empty">لیستی ئەرکەکان بەتاڵە</div>';
+  $('#addTaskBtn').onclick=()=>{
+    let text=$('#tk_text').value.trim();if(!text)return alert('ئەرکەکە بنووسە');
+    let l=get('proTasks');l.unshift({text,prio:$('#tk_prio').value,done:false});
+    put('proTasks',l);$('#tk_text').value='';renderTasks();
+  };
+}
+window.togTask=(i)=>{let l=get('proTasks');if(l[i]){l[i].done=!l[i].done;put('proTasks',l);renderTasks();}};
+window.delTask=(i)=>{let l=get('proTasks');l.splice(i,1);put('proTasks',l);renderTasks();};
+
+// کورتکەرەوەی لینک
+function renderShortLinks(){
+  let list=get('proShortLinks');
+  $('#shListArea').innerHTML=list.length?`<div class="tbl-wrap" style="margin-top:16px"><table class="tbl"><thead><tr><th>لینکی کورت</th><th>لینکی بنەڕەتی</th><th>کۆپی</th></tr></thead><tbody>
+  ${list.map((x,i)=>`<tr><td><strong>${escapeHtml(x.short)}</strong></td><td style="max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${escapeHtml(x.orig)}</td><td><button class="btn sm" onclick="navigator.clipboard?.writeText('${escapeHtml(x.short)}')">📋 کۆپی</button></td></tr>`).join('')}
+  </tbody></table></div>`:'';
+}
+
+// تایمەر و ستۆپواچ
+function initTimer(){
+  let mode='countdown',secLeft=300,running=false;
+  const upd=()=>{
+    let m=String(Math.floor(secLeft/60)).padStart(2,'0'),s=String(secLeft%60).padStart(2,'0');
+    $('#tmDisplay').textContent=`${m}:${s}`;
+  };
+  const reset=()=>{
+    if(timerInterval){clearInterval(timerInterval);timerInterval=null;}
+    running=false;
+    if(mode==='countdown')secLeft=Math.max(0,(Number($('#tm_min')?.value||0)*60)+Number($('#tm_sec')?.value||0));
+    else if(mode==='pomodoro')secLeft=25*60;
+    else secLeft=0;
+    upd();
+  };
+  document.querySelectorAll('[data-tmode]').forEach(b=>{
+    b.onclick=()=>{
+      document.querySelectorAll('[data-tmode]').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');mode=b.dataset.tmode;
+      $('#tmInputs').style.display=mode==='countdown'?'grid':'none';
+      reset();
+    };
+  });
+  $('#tmStart').onclick=()=>{
+    if(running)return;
+    if(mode==='countdown'&&secLeft===0)reset();
+    running=true;
+    timerInterval=setInterval(()=>{
+      if(mode==='stopwatch'){secLeft++;upd();}
+      else{
+        if(secLeft>0){secLeft--;upd();}
+        else{clearInterval(timerInterval);timerInterval=null;running=false;alert('⏰ کاتەکە تەواو بوو!');}
+      }
+    },1000);
+  };
+  $('#tmPause').onclick=()=>{if(timerInterval){clearInterval(timerInterval);timerInterval=null;running=false;}};
+  $('#tmReset').onclick=reset;
+}
+
+// یارییە سادەکان
+function initGames(mode){
+  document.querySelectorAll('[data-gmode]').forEach(b=>{
+    b.classList.toggle('active',b.dataset.gmode===mode);
+    b.onclick=()=>initGames(b.dataset.gmode);
+  });
+  let area=$('#gameArea');
+  if(mode==='xo'){
+    let board=Array(9).fill(''),over=false;
+    const wins=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+    const check=b=>{
+      for(let [a,c,d] of wins)if(b[a]&&b[a]===b[c]&&b[a]===b[d])return b[a];
+      return b.includes('')?null:'draw';
+    };
+    const drawXO=()=>{
+      let st=check(board);
+      let msg=st==='X'?'🎉 پیرۆزە! تۆ بردتەوە':st==='O'?'🤖 کۆمپیوتەر بردییەوە':st==='draw'?'🤝 یەکسان بوون!':'نۆرەی تۆیە (X)';
+      area.innerHTML=`<div style="text-align:center;font-weight:700">${msg}</div>
+      <div class="game-board">${board.map((v,i)=>`<button class="game-cell" data-xo="${i}">${v}</button>`).join('')}</div>
+      <div style="text-align:center"><button class="btn sm" id="xoReset">↻ یاری نوێ</button></div>`;
+      $('#xoReset').onclick=()=>initGames('xo');
+      area.querySelectorAll('[data-xo]').forEach(btn=>btn.onclick=()=>{
+        let i=Number(btn.dataset.xo);
+        if(over||board[i])return;
+        board[i]='X';
+        if(check(board)){over=true;drawXO();return;}
+        let empty=board.map((v,idx)=>v===''?idx:null).filter(v=>v!==null);
+        if(empty.length){board[empty[Math.floor(Math.random()*empty.length)]]='O';}
+        if(check(board))over=true;
+        drawXO();
+      });
+    };
+    drawXO();
+  }else if(mode==='mem'){
+    let emojis=['💎','🚀','🎨','⚡','👑','🌿','🎯','🔥'];
+    let deck=[...emojis,...emojis].sort(()=>Math.random()-.5);
+    let open=[],matched=[],moves=0;
+    const drawMem=()=>{
+      area.innerHTML=`<div style="text-align:center" class="small">جووڵەکان: ${moves} | دۆزراوە: ${matched.length/2} / 8</div>
+      <div class="mem-grid">${deck.map((em,i)=>{
+        let isVis=open.includes(i)||matched.includes(i);
+        return `<button class="mem-card ${isVis?'open':''}" data-mem="${i}">${isVis?em:'❓'}</button>`;
+      }).join('')}</div>
+      <div style="text-align:center"><button class="btn sm" id="memReset">↻ تێکەڵکردنەوە</button></div>`;
+      $('#memReset').onclick=()=>initGames('mem');
+      area.querySelectorAll('[data-mem]').forEach(btn=>btn.onclick=()=>{
+        let i=Number(btn.dataset.mem);
+        if(open.length===2||open.includes(i)||matched.includes(i))return;
+        open.push(i);drawMem();
+        if(open.length===2){
+          moves++;
+          let [a,b]=open;
+          if(deck[a]===deck[b]){matched.push(a,b);open=[];drawMem();}
+          else{setTimeout(()=>{open=[];drawMem();},650);}
+        }
+      });
+    };
+    drawMem();
+  }else{
+    let target=Math.floor(1+Math.random()*100),tries=0;
+    area.innerHTML=`<div style="max-width:340px;margin:auto;text-align:center">
+      <p class="small">ژمارەیەکم لە نێوان ١ بۆ ١٠٠ هەڵبژاردووە، بیزانە!</p>
+      <div style="display:flex;gap:8px"><input id="gs_inp" type="number" placeholder="ژمارە بنووسە..." style="width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;background:#0b1426;color:var(--text)"><button class="primary" id="gs_btn">پشکنین</button></div>
+      <div id="gs_msg" style="margin-top:12px;font-weight:700"></div>
+    </div>`;
+    $('#gs_btn').onclick=()=>{
+      let v=Number($('#gs_inp').value);if(!v)return;
+      tries++;
+      if(v===target)$('#gs_msg').innerHTML=`🎉 ئافەرین! ژمارەکە <strong>${target}</strong> بوو، بە ${tries} هەوڵ دۆزیتەوە!`;
+      else if(v<target)$('#gs_msg').textContent='⬆️ ژمارەکە گەورەترە!';
+      else $('#gs_msg').textContent='⬇️ ژمارەکە بچووکترە!';
+    };
+  }
+}
+
+document.addEventListener('click',e=>{
+  if(e.target.closest('[data-fav]')){
+    let f=e.target.closest('[data-fav]');
+    let id=f.dataset.fav,v=get('proFav');
+    put('proFav',v.includes(id)?v.filter(x=>x!==id):[...v,id]);
+    render();return;
+  }
+  let t=e.target.closest('[data-tool]');if(t)openTool(t.dataset.tool);
+  let c=e.target.closest('[data-cat]');if(c){category=c.dataset.cat;view='all';render();}
+  let sc=e.target.closest('[data-sidecat]');if(sc){category=sc.dataset.sidecat;view='all';render();}
+  let v=e.target.closest('[data-view]');if(v){view=v.dataset.view;category='هەموو';document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b===v));render();}
+});
+$('#search').addEventListener('input',render);
+$('#toolBody').addEventListener('click',e=>{if(e.target.id==='runTool')run();});
+$('#closeTool').addEventListener('click',()=>{if(timerInterval){clearInterval(timerInterval);timerInterval=null;}$('#workspace').classList.remove('show');});
+$('#theme').addEventListener('click',()=>{document.body.classList.toggle('light');localStorage.setItem('proLight',document.body.classList.contains('light')?'1':'0');});
+if(localStorage.getItem('proLight')==='1')document.body.classList.add('light');
+render();
 </script>
+</body>
+</html>
