@@ -106,7 +106,7 @@ const $=s=>document.querySelector(s);
 let category='هەموو',view='all',active=null,timerInterval=null;
 const get=(k,def='[]')=>{try{return JSON.parse(localStorage.getItem(k)||def)}catch{return JSON.parse(def)}};
 const put=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
-function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;n'}[c]))}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function fmt(n){return Number(n||0).toLocaleString('en-US',{maximumFractionDigits:2})}
 
 function render(){
@@ -134,21 +134,21 @@ function openTool(id){
   let x=data.find(a=>a.id===id);if(!x)return;active=id;
   let body='';
   switch(id){
-    case'calc':body=field('ژمارەی یەکەم','a','','number','0')+field('کردار (+ − × ÷)','op','+')+field('ژمارەی دووەم','b','','number','0')+button('هەژمار بکە');break;
-    case'percent':body=field('ژمارە','a','','number','100')+field('چەند لە سەد؟','b','','number','10')+button('هەژمار بکە');break;
-    case'discount':case'tax':body=field('نرخی سەرەتا','a','','number','100000')+field('ڕێژەی سەدی','b','','number','15')+button('هەژمار بکە');break;
-    case'length':case'weight':body=field('بڕ','a','','number','1')+`<div class="field"><label>لە</label><select id="from">${(id==='length'?['مەتەر','کیلۆمەتەر','سانتیمەتەر']:['کیلۆگرام','گرام','پاوەند']).map(v=>`<option>${v}</option>`).join('')}</select></div><div class="field"><label>بۆ</label><select id="to">${(id==='length'?['مەتەر','کیلۆمەتەر','سانتیمەتەر']:['کیلۆگرام','گرام','پاوەند']).map(v=>`<option>${v}</option>`).join('')}</select></div>`+button('بگۆڕە');break;
-    case'temp':body=field('پلە','a','','number','25')+`<div class="field"><label>لە</label><select id="from"><option>سیلیزی</option><option>فاهڕەنهایت</option></select></div><div class="field"><label>بۆ</label><select id="to"><option>فاهڕەنهایت</option><option>سیلیزی</option></select></div>`+button('بگۆڕە');break;
-    case'password':body=field('درێژی وشەی نهێنی','a','16','number','16')+button('دروستی بکە');break;
-    case'counter':case'case':case'reverse':case'clean':body=area('دەقەکەت بنووسە','a','سڵاو جیهان')+button('ئەنجام بدە');break;
+    case'calc':body=field('ژمارەی یەکەم','a')+field('کردار (+ − × ÷)','op','+ or -')+field('ژمارەی دووەم','b')+button('هەژمار بکە');break;
+    case'percent':body=field('ژمارە','a')+field('چەند لە سەد؟','b')+button('هەژمار بکە');break;
+    case'discount':case'tax':body=field('نرخی سەرەتا','a')+field('ڕێژەی سەدی','b')+button('هەژمار بکە');break;
+    case'length':case'weight':body=field('بڕ','a')+`<div class="field"><label>لە</label><select id="from">${(id==='length'?['مەتەر','کیلۆمەتەر','سانتیمەتەر']:['کیلۆگرام','گرام','پاوەند']).map(v=>`<option>${v}</option>`).join('')}</select></div><div class="field"><label>بۆ</label><select id="to">${(id==='length'?['مەتەر','کیلۆمەتەر','سانتیمەتەر']:['کیلۆگرام','گرام','پاوەند']).map(v=>`<option>${v}</option>`).join('')}</select></div>`+button('بگۆڕە');break;
+    case'temp':body=field('پلە','a')+`<div class="field"><label>لە</label><select id="from"><option>سیلیزی</option><option>فاهڕەنهایت</option></select></div><div class="field"><label>بۆ</label><select id="to"><option>فاهڕەنهایت</option><option>سیلیزی</option></select></div>`+button('بگۆڕە');break;
+    case'password':body=field('درێژی وشەی نهێنی','a','16','number')+button('دروستی بکە');break;
+    case'counter':case'case':case'reverse':case'clean':body=area('دەقەکەت بنووسە','a')+button('ئەنجام بدە');break;
     case'json':body=area('JSON بنووسە','a','{"name":"Ali"}')+button('ڕێکی بخە');break;
-    case'age':body=field('بەرواری لەدایکبوون','a','','date','2001-05-14')+button('تەمەنم بژمێرە');break;
-    case'date':body=field('بەرواری یەکەم','a','','date',new Date().toISOString().slice(0,10))+field('بەرواری دووەم','b','','date',new Date().toISOString().slice(0,10))+button('جیاوازی بدۆزەوە');break;
-    case'random':body=field('لە ژمارەی','a','1','number','1')+field('تا ژمارەی','b','100','number','100')+button('ژمارە هەڵبژێرە');break;
+    case'age':body=field('بەرواری لەدایکبوون','a','','date')+button('تەمەنم بژمێرە');break;
+    case'date':body=field('بەرواری یەکەم','a','','date')+field('بەرواری دووەم','b','','date')+button('جیاوازی بدۆزەوە');break;
+    case'random':body=field('لە ژمارەی','a','1','number')+field('تا ژمارەی','b','100','number')+button('ژمارە هەڵبژێرە');break;
     case'coin':body=button('دراوەکە فڕێ بدە');break;
     case'color':body=`<div class="field"><label>ڕەنگ هەڵبژێرە</label><input id="a" type="color" value="#8b5cf6"></div>`+button('کۆپی کۆدی ڕەنگ');break;
-    case'username':body=field('ناو یان وشەی دڵخواز','a','developer')+button('ناو دروست بکە');break;
-    case'hashtags':body=field('بابەت','a','وەرزش، تەکنەلۆژیا')+button('هاشتاگ دروست بکە');break;
+    case'username':body=field('ناو یان وشەی دڵخواز','a')+button('ناو دروست بکە');break;
+    case'hashtags':body=field('بابەت','a','وەرزش، تەکنەلۆژیا...')+button('هاشتاگ دروست بکە');break;
 
     case'receipt':
       body=`<div class="grid2">
@@ -156,7 +156,7 @@ function openTool(id){
         ${field('ژمارەی وەسڵ','r_num','','text','REC-'+Math.floor(1000+Math.random()*9000))}
         ${field('وەرگیرا لە (ناوی کەس)','r_from','ناوی کڕیار یان کەسەکە')}
         ${field('جۆری مامەڵە','r_type','','text','وەسڵی وەرگرتنی پارە')}
-        ${field('بڕی پارە','r_amt','250000','number','250000')}
+        ${field('بڕی پارە','r_amt','250000','number')}
         <div class="field"><label>دراو</label><select id="r_cur"><option>دیناری عێراقی (IQD)</option><option>دۆلاری ئەمریکی ($)</option></select></div>
         ${field('شێوازی پارەدان','r_pay','','text','نەقد (کاش)')}
         ${field('بەروار','r_date','','date',new Date().toISOString().slice(0,10))}
@@ -184,19 +184,19 @@ function openTool(id){
 
     case'pnl':
       body=`<div class="grid2">
-        ${field('کۆی داهات / فرۆشتن','p_rev','1000000','number','1000000')}
-        ${field('تێچووی کاڵا (COGS)','p_cogs','600000','number','600000')}
-        ${field('کرێی شوێن و کارەبا','p_rent','100000','number','100000')}
-        ${field('مووچەی کارمەندان','p_sal','150000','number','150000')}
-        ${field('خەرجی تر و ڕیکلام','p_oth','50000','number','50000')}
+        ${field('کۆی داهات / فرۆشتن','p_rev','1000000','number')}
+        ${field('تێچووی کاڵا (COGS)','p_cogs','600000','number')}
+        ${field('کرێی شوێن و کارەبا','p_rent','100000','number')}
+        ${field('مووچەی کارمەندان','p_sal','150000','number')}
+        ${field('خەرجی تر و ڕیکلام','p_oth','50000','number')}
       </div>`+button('هەژمارکردنی قازانج و زیان');
       break;
 
     case'installment':
       body=`<div class="grid3">
-        ${field('کۆی نرخی کاڵا یان قەرز','in_total','1200000','number','1200000')}
-        ${field('پێشەکی دراو','in_down','200000','number','200000')}
-        ${field('ژمارەی مانگەکان','in_months','10','number','10')}
+        ${field('کۆی نرخی کاڵا یان قەرز','in_total','1200000','number')}
+        ${field('پێشەکی دراو','in_down','200000','number','0')}
+        ${field('ژمارەی مانگەکان','in_months','10','number','6')}
         ${field('ڕێژەی زیادە / سوود (%)','in_rate','0','number','0')}
         ${field('بەرواری دەستپێک','in_start','','date',new Date().toISOString().slice(0,10))}
       </div>`+button('هەژمارکردنی خشتەی قیست');
@@ -214,8 +214,8 @@ function openTool(id){
 
     case'salary':
       body=`<div class="grid2">
-        ${field('مووچەی بنەڕەتی','s_base','750000','number','750000')}
-        ${field('پاداشت و دەرماڵە','s_bonus','50000','number','50000')}
+        ${field('مووچەی بنەڕەتی','s_base','750000','number')}
+        ${field('پاداشت و دەرماڵە','s_bonus','50000','number','0')}
         ${field('کاتژمێری کاری زیادە (Overtime)','s_ot_hrs','0','number','0')}
         ${field('نرخی یەک کاتژمێری زیادە','s_ot_rate','5000','number','5000')}
         ${field('ڕۆژانی نەهاتن (غیاب)','s_abs','0','number','0')}
@@ -244,9 +244,9 @@ function openTool(id){
       body=`<div class="grid2">
         ${field('ناوی کاڵا','inv_name','بۆ نموونە: لاپتۆپ Dell')}
         ${field('کۆد / SKU','inv_sku','ITM-01')}
-        ${field('بڕی بەردەست لە کۆگا','inv_qty','10','number','10')}
-        ${field('نرخی کڕین','inv_buy','500000','number','500000')}
-        ${field('نرخی فرۆشتن','inv_sell','620000','number','620000')}
+        ${field('بڕی بەردەست لە کۆگا','inv_qty','10','number')}
+        ${field('نرخی کڕین','inv_buy','500000','number')}
+        ${field('نرخی فرۆشتن','inv_sell','620000','number')}
         ${field('سنووری ئاگادارکردنەوەی کەمبوون','inv_min','3','number','3')}
       </div>
       <button class="primary" id="addInvItem">+ زیادکردن بۆ کۆگا</button>
@@ -258,7 +258,7 @@ function openTool(id){
         ${field('ناوی تەواوی کارمەند','emp_name','ئەحمەد محەمەد')}
         ${field('ناونیشانی کار / بەش','emp_role','فرۆشیار')}
         ${field('ژمارەی مۆبایل','emp_phone','0750 000 0000')}
-        ${field('مووچەی مانگانە','emp_sal','700000','number','700000')}
+        ${field('مووچەی مانگانە','emp_sal','700000','number')}
       </div>
       <button class="primary" id="addEmpBtn">+ تۆمارکردنی کارمەند</button>
       <div id="empListArea"></div>`;
@@ -267,7 +267,7 @@ function openTool(id){
     case'finreport':
       body=`<div class="grid3">
         <div class="field"><label>جۆر</label><select id="fr_type"><option value="in">داهات (+)</option><option value="out">خەرجی (-)</option></select></div>
-        ${field('بڕی پارە','fr_amt','50000','number','50000')}
+        ${field('بڕی پارە','fr_amt','50000','number')}
         ${field('پۆلێن / هۆکار','fr_cat','فرۆشتن، کرێ، کڕین...')}
       </div>
       <button class="primary" id="addFrBtn">+ تۆمارکردن لە ڕاپۆرت</button>
@@ -372,8 +372,8 @@ function openTool(id){
         <option value="triangle">سێگۆشە (بنکە و بەرزی)</option>
       </select></div>
       <div id="ar_fields" class="grid2">
-        ${field('درێژی (مەتر)','ar_a','10','number','10')}
-        ${field('پانی (مەتر)','ar_b','5','number','5')}
+        ${field('درێژی (مەتر)','ar_a','10','number')}
+        ${field('پانی (مەتر)','ar_b','5','number')}
       </div>
       `+button('هەژمارکردنی ڕووبەر و چێوە');
       break;
@@ -424,13 +424,13 @@ function openTool(id){
 
     case'lovecalc':
       body=`<div class="grid2">
-        ${field('ناوی یەکەم (بۆ نموونە: ئارام)','lc_1','ئارام')}
-        ${field('ناوی دووەم (بۆ نموونە: ژالیا)','lc_2','ژالیا')}
+        ${field('ناوی یەکەم (بۆ نموونە: ئارام)','lc_1','ناوی یەکەم')}
+        ${field('ناوی دووەم (بۆ نموونە: ژالیا)','lc_2','ناوی دووەم')}
       </div>`+button('هەژمارکردنی ڕێژەی خۆشەویستی ❤️');
       break;
 
     case'liveage':
-      body=field('بەرواری لەدایکبوونت هەڵبژێرە','la_date','','date','2001-05-14')+button('پیشاندانی تەمەنی ورد');
+      body=field('بەرواری لەدایکبوونت هەڵبژێرە','la_date','','date')+button('پیشاندانی تەمەنی ورد');
       break;
 
     case'devinfo':
@@ -508,10 +508,10 @@ function initToolExtras(id){
   if(id==='area'){
     $('#ar_shape').onchange=()=>{
       let s=$('#ar_shape').value;
-      if(s==='rect')$('#ar_fields').innerHTML=field('درێژی (مەتر)','ar_a','10','number','10')+field('پانی (مەتر)','ar_b','5','number','5');
-      else if(s==='square')$('#ar_fields').innerHTML=field('درێژی لا (مەتر)','ar_a','6','number','6');
-      else if(s==='circle')$('#ar_fields').innerHTML=field('نیوەتیرە (مەتر)','ar_a','4','number','4');
-      else $('#ar_fields').innerHTML=field('بنکە (مەتر)','ar_a','8','number','8')+field('بەرزی (مەتر)','ar_b','5','number','5');
+      if(s==='rect')$('#ar_fields').innerHTML=field('درێژی (مەتر)','ar_a','10','number')+field('پانی (مەتر)','ar_b','5','number');
+      else if(s==='square')$('#ar_fields').innerHTML=field('درێژی لا (مەتر)','ar_a','6','number');
+      else if(s==='circle')$('#ar_fields').innerHTML=field('نیوەتیرە (مەتر)','ar_a','4','number');
+      else $('#ar_fields').innerHTML=field('بنکە (مەتر)','ar_a','8','number')+field('بەرزی (مەتر)','ar_b','5','number');
     };
   }
   if(id==='listmaker'){
@@ -709,7 +709,7 @@ function run(){
       case'qrcode':{
         let t=$('#qr_type').value,payload='';
         if(t==='wifi')payload=`WIFI:T:WPA;S:${$('#qr_ssid').value};P:${$('#qr_pass').value};;`;
-        else if(t==='wa')payload=`https://wa.me/${$('#qr_phone').value.replace(/\D/g, '')}?text=${encodeURIComponent($('#qr_wamsg').value)}`;
+        else if(t==='wa')payload=`https://wa.me/${$('#qr_phone').value.replace(/\D/g,'')}?text=${encodeURIComponent($('#qr_wamsg').value)}`;
         else payload=$('#qr_val').value.trim();
         if(!payload)throw Error('تکایە ناوەڕۆک بنووسە');
         let sz=Math.max(120,Math.min(500,Number($('#qr_size').value||240)));
@@ -887,7 +887,7 @@ function run(){
         if(!n1||!n2)throw Error('تکایە هەردوو ناوەکەت بنووسە');
         let combined=(n1+n2).toLowerCase();
         let hash=0;for(let i=0;i<combined.length;i++)hash+=combined.charCodeAt(i);
-        let score=40+(hash%55);
+        let score=40+(hash%55); // ڕێژەی نێوان 40 تا 95 بۆ سەرسامکردن
         r=`💖 ڕێژەی گونجان و خۆشەویستی نێوان (${n1}) و (${n2}):\n\n✨ ${score}٪ ✨\n\n${score>85?'ئاهەنگ بگێڕن! ئێوە زۆر بۆ یەکتر گونجاون! 😍':score>70?'پەیوەندییەکی زۆر باش و بەهێزە 🥰':'پێویست بە کات و تێگەیشتنی زیاتر دەکات 😉'}`;
         break;
       }
@@ -902,7 +902,7 @@ function run(){
         let hours=Math.floor(diff/(1000*60*60));
         let mins=Math.floor(diff/(1000*60));
         let secs=Math.floor(diff/1000);
-        let breaths=days*22000;
+        let breaths=days*22000; // خەمڵاندنی هەناسە
         r=`⏳ وردەکاری تەمەنت تا ئەم ساتە:\n\n• ڕۆژەکان: ${fmt(days)} ڕۆژ\n• کاتژمێرەکان: ${fmt(hours)} کاتژمێر\n• خولەکەکان: ${fmt(mins)} خولەک\n• چرکەکان: ${fmt(secs)} چرکە\n• خەمڵاندنی ژمارەی هەناسەکانت: نزیکەی ${fmt(breaths)} هەناسە 🫁`;
         break;
       }
@@ -911,7 +911,7 @@ function run(){
         let txt=$('#gt_inp').value.trim(), st=$('#gt_style').value;
         if(!txt)throw Error('دەق بنووسە');
         if(st==='bubble'){
-          const map={'a':'Ⓐ','b':'Ⓑ','c':'Ⓒ','d':'Ⓓ','e':'Ⓔ','f':'Ⓕ','g':'Ⓖ','h':'Ⓗ','i':'Ⓘ','j':'Ⓙ','k':'Ⓚ','l':'Ⓛ','m':'Ⓜ','n':'Ⓝ','o':'Ⓞ','p':'Ⓟ','q':'Ⓠ','r':'Ⓡ','s':'Ⓢ','t':'Ⓣ','u':'Ⓤ','v':'Ⓑ','w':'Ⓦ','x':'Ⓧ','y':'Ⓨ','z':'Ⓩ','ا':'ا','ب':'ب'};
+          const map={'a':'Ⓐ','b':'Ⓑ','c':'Ⓒ','d':'Ⓓ','e':'Ⓔ','f':'Ⓕ','g':'Ⓖ','h':'Ⓗ','i':'Ⓘ','j':'Ⓙ','k':'Ⓚ','l':'Ⓛ','m':'Ⓜ','n':'Ⓝ','o':'Ⓞ','p':'Ⓟ','q':'Ⓠ','r':'Ⓡ','s':'Ⓢ','t':'Ⓣ','u':'Ⓤ','v':'Ⓥ','w':'Ⓦ','x':'Ⓧ','y':'Ⓨ','z':'Ⓩ','ا':'ا','ب':'ب'};
           r=[...txt].map(c=>map[c.toLowerCase()]||c).join('');
         }else if(st==='space'){
           r=[...txt].join('   ');
@@ -952,9 +952,7 @@ function renderInventory(){
   let totVal=items.reduce((s,x)=>s+x.qty*x.buy,0);
   let totSell=items.reduce((s,x)=>s+x.qty*x.sell,0);
   let low=items.filter(x=>x.qty<=x.min).length;
-  let areaEl=$('#invListArea');
-  if(!areaEl)return;
-  areaEl.innerHTML=`
+  $('#invListArea').innerHTML=`
     <div class="kpi-grid" style="margin-top:16px">
       <div class="kpi"><span>جۆری کاڵا</span><strong>${items.length}</strong></div>
       <div class="kpi"><span>بەهای کۆگا (کڕین)</span><strong>${fmt(totVal)}</strong></div>
@@ -967,8 +965,7 @@ function renderInventory(){
       <td>${x.qty<=x.min?'<span class="pill err">کەمبووە</span>':'<span class="pill ok">بەردەستە</span>'}</td>
       <td><button class="btn sm" onclick="chgInv(${i},1)">+</button> <button class="btn sm" onclick="chgInv(${i},-1)">-</button> <button class="btn danger sm" onclick="delInv(${i})">✕</button></td>
     </tr>`).join('')}</tbody></table></div>`:'<div class="empty">کۆگا بەتاڵە، یەکەم کاڵا زیاد بکە</div>'}`;
-  let addBtn=$('#addInvItem');
-  if(addBtn) addBtn.onclick=()=>{
+  $('#addInvItem').onclick=()=>{
     let name=$('#inv_name').value.trim();if(!name)return alert('ناوی کاڵا بنووسە');
     let list=get('proInventory');
     list.unshift({name,sku:$('#inv_sku').value||'---',qty:Number($('#inv_qty').value||0),buy:Number($('#inv_buy').value||0),sell:Number($('#inv_sell').value||0),min:Number($('#inv_min').value||3)});
@@ -981,9 +978,7 @@ window.delInv=(i)=>{let l=get('proInventory');l.splice(i,1);put('proInventory',l
 function renderEmployees(){
   let list=get('proEmployees');
   let totSal=list.reduce((s,x)=>s+x.sal,0);
-  let areaEl=$('#empListArea');
-  if(!areaEl)return;
-  areaEl.innerHTML=`
+  $('#empListArea').innerHTML=`
     <div class="kpi-grid" style="margin-top:16px">
       <div class="kpi"><span>ژمارەی کارمەندان</span><strong>${list.length}</strong></div>
       <div class="kpi"><span>کۆی مووچەی مانگانە</span><strong style="color:var(--b)">${fmt(totSal)}</strong></div>
@@ -991,8 +986,7 @@ function renderEmployees(){
     ${list.length?`<div class="tbl-wrap"><table class="tbl"><thead><tr><th>ناو</th><th>بەش / کار</th><th>مۆبایل</th><th>مووچە</th><th>سڕینەوە</th></tr></thead><tbody>
     ${list.map((x,i)=>`<tr><td><strong>${escapeHtml(x.name)}</strong></td><td>${escapeHtml(x.role)}</td><td>${escapeHtml(x.phone)}</td><td>${fmt(x.sal)}</td><td><button class="btn danger sm" onclick="delEmp(${i})">✕</button></td></tr>`).join('')}
     </tbody></table></div>`:'<div class="empty">هیچ کارمەندێک تۆمار نەکراوە</div>'}`;
-  let addBtn=$('#addEmpBtn');
-  if(addBtn) addBtn.onclick=()=>{
+  $('#addEmpBtn').onclick=()=>{
     let name=$('#emp_name').value.trim();if(!name)return alert('ناوی کارمەند بنووسە');
     let l=get('proEmployees');l.unshift({name,role:$('#emp_role').value||'کارمەند',phone:$('#emp_phone').value||'---',sal:Number($('#emp_sal').value||0)});
     put('proEmployees',l);$('#emp_name').value='';renderEmployees();
@@ -1005,9 +999,7 @@ function renderFinReport(){
   let inc=list.filter(x=>x.type==='in').reduce((s,x)=>s+x.amt,0);
   let exp=list.filter(x=>x.type==='out').reduce((s,x)=>s+x.amt,0);
   let bal=inc-exp;
-  let areaEl=$('#frListArea');
-  if(!areaEl)return;
-  areaEl.innerHTML=`
+  $('#frListArea').innerHTML=`
     <div class="kpi-grid" style="margin-top:16px">
       <div class="kpi"><span>کۆی داهات (+)</span><strong style="color:var(--ok)">${fmt(inc)}</strong></div>
       <div class="kpi"><span>کۆی خەرجی (-)</span><strong style="color:var(--err)">${fmt(exp)}</strong></div>
@@ -1016,8 +1008,7 @@ function renderFinReport(){
     ${list.length?`<div class="tbl-wrap"><table class="tbl"><thead><tr><th>جۆر</th><th>پۆلێن</th><th>بڕ</th><th>بەروار</th><th>سڕینەوە</th></tr></thead><tbody>
     ${list.map((x,i)=>`<tr><td>${x.type==='in'?'<span class="pill ok">داهات</span>':'<span class="pill err">خەرجی</span>'}</td><td>${escapeHtml(x.cat)}</td><td><strong>${fmt(x.amt)}</strong></td><td>${x.date}</td><td><button class="btn danger sm" onclick="delFr(${i})">✕</button></td></tr>`).join('')}
     </tbody></table></div>`:'<div class="empty">هیچ جووڵەیەکی دارایی تۆمار نەکراوە</div>'}`;
-  let addBtn=$('#addFrBtn');
-  if(addBtn) addBtn.onclick=()=>{
+  $('#addFrBtn').onclick=()=>{
     let amt=Number($('#fr_amt').value||0);if(amt<=0)return alert('بڕی پارە بنووسە');
     let l=get('proFinReport');l.unshift({type:$('#fr_type').value,amt,cat:$('#fr_cat').value||'گشتی',date:new Date().toLocaleDateString('en-GB')});
     put('proFinReport',l);$('#fr_amt').value='';renderFinReport();
@@ -1027,15 +1018,12 @@ window.delFr=(i)=>{let l=get('proFinReport');l.splice(i,1);put('proFinReport',l)
 
 function renderNotes(){
   let list=get('proNotes');
-  let areaEl=$('#notesListArea');
-  if(!areaEl)return;
-  areaEl.innerHTML=list.length?`<div class="grid2" style="margin-top:16px">${list.map((n,i)=>`<div class="kpi">
+  $('#notesListArea').innerHTML=list.length?`<div class="grid2" style="margin-top:16px">${list.map((n,i)=>`<div class="kpi">
     <div style="display:flex;justify-content:space-between;align-items:center"><strong>${escapeHtml(n.title)}</strong><button class="btn danger sm" onclick="delNote(${i})">✕</button></div>
     <p style="margin:8px 0;font-size:13px;white-space:pre-wrap">${escapeHtml(n.body)}</p>
     <span class="small">${n.date}</span>
   </div>`).join('')}</div>`:'<div class="empty">هیچ تێبینییەک نییە</div>';
-  let addBtn=$('#addNoteBtn');
-  if(addBtn) addBtn.onclick=()=>{
+  $('#addNoteBtn').onclick=()=>{
     let body=$('#nt_body').value.trim();if(!body)return alert('تێبینی بنووسە');
     let l=get('proNotes');l.unshift({title:$('#nt_title').value.trim()||'بێ سەردێڕ',body,date:new Date().toLocaleString('en-GB')});
     put('proNotes',l);$('#nt_body').value='';renderNotes();
@@ -1045,9 +1033,7 @@ window.delNote=(i)=>{let l=get('proNotes');l.splice(i,1);put('proNotes',l);rende
 
 function renderTasks(){
   let list=get('proTasks');
-  let areaEl=$('#tasksListArea');
-  if(!areaEl)return;
-  areaEl.innerHTML=list.length?`<div style="display:grid;gap:8px;margin-top:16px">${list.map((t,i)=>`<div class="kpi" style="display:flex;justify-content:space-between;align-items:center;opacity:${t.done?.6:1}">
+  $('#tasksListArea').innerHTML=list.length?`<div style="display:grid;gap:8px;margin-top:16px">${list.map((t,i)=>`<div class="kpi" style="display:flex;justify-content:space-between;align-items:center;opacity:${t.done?.6:1}">
     <div style="display:flex;align-items:center;gap:10px">
       <input type="checkbox" ${t.done?'checked':''} onchange="togTask(${i})" style="width:18px;height:18px;cursor:pointer">
       <span style="text-decoration:${t.done?'line-through':'none'}">${escapeHtml(t.text)}</span>
@@ -1055,8 +1041,7 @@ function renderTasks(){
     </div>
     <button class="btn danger sm" onclick="delTask(${i})">✕</button>
   </div>`).join('')}</div>`:'<div class="empty">لیستی ئەرکەکان بەتاڵە</div>';
-  let addBtn=$('#addTaskBtn');
-  if(addBtn) addBtn.onclick=()=>{
+  $('#addTaskBtn').onclick=()=>{
     let text=$('#tk_text').value.trim();if(!text)return alert('ئەرکەکە بنووسە');
     let l=get('proTasks');l.unshift({text,prio:$('#tk_prio').value,done:false});
     put('proTasks',l);$('#tk_text').value='';renderTasks();
@@ -1067,9 +1052,7 @@ window.delTask=(i)=>{let l=get('proTasks');l.splice(i,1);put('proTasks',l);rende
 
 function renderShortLinks(){
   let list=get('proShortLinks');
-  let areaEl=$('#shListArea');
-  if(!areaEl)return;
-  areaEl.innerHTML=list.length?`<div class="tbl-wrap" style="margin-top:16px"><table class="tbl"><thead><tr><th>لینکی کورت</th><th>لینکی بنەڕەتی</th><th>کۆپی</th></tr></thead><tbody>
+  $('#shListArea').innerHTML=list.length?`<div class="tbl-wrap" style="margin-top:16px"><table class="tbl"><thead><tr><th>لینکی کورت</th><th>لینکی بنەڕەتی</th><th>کۆپی</th></tr></thead><tbody>
   ${list.map((x,i)=>`<tr><td><strong>${escapeHtml(x.short)}</strong></td><td style="max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${escapeHtml(x.orig)}</td><td><button class="btn sm" onclick="navigator.clipboard?.writeText('${escapeHtml(x.short)}')">📋 کۆپی</button></td></tr>`).join('')}
   </tbody></table></div>`:'';
 }
@@ -1078,7 +1061,7 @@ function initTimer(){
   let mode='countdown',secLeft=300,running=false;
   const upd=()=>{
     let m=String(Math.floor(secLeft/60)).padStart(2,'0'),s=String(secLeft%60).padStart(2,'0');
-    let disp=$('#tmDisplay');if(disp)disp.textContent=`${m}:${s}`;
+    $('#tmDisplay').textContent=`${m}:${s}`;
   };
   const reset=()=>{
     if(timerInterval){clearInterval(timerInterval);timerInterval=null;}
@@ -1092,12 +1075,11 @@ function initTimer(){
     b.onclick=()=>{
       document.querySelectorAll('[data-tmode]').forEach(x=>x.classList.remove('active'));
       b.classList.add('active');mode=b.dataset.tmode;
-      let inputs=$('#tmInputs');if(inputs)inputs.style.display=mode==='countdown'?'grid':'none';
+      $('#tmInputs').style.display=mode==='countdown'?'grid':'none';
       reset();
     };
   });
-  let startBtn=$('#tmStart');
-  if(startBtn) startBtn.onclick=()=>{
+  $('#tmStart').onclick=()=>{
     if(running)return;
     if(mode==='countdown'&&secLeft===0)reset();
     running=true;
@@ -1109,10 +1091,8 @@ function initTimer(){
       }
     },1000);
   };
-  let pauseBtn=$('#tmPause');
-  if(pauseBtn) pauseBtn.onclick=()=>{if(timerInterval){clearInterval(timerInterval);timerInterval=null;running=false;}};
-  let resetBtn=$('#tmReset');
-  if(resetBtn) resetBtn.onclick=reset;
+  $('#tmPause').onclick=()=>{if(timerInterval){clearInterval(timerInterval);timerInterval=null;running=false;}};
+  $('#tmReset').onclick=reset;
 }
 
 function initGames(mode){
@@ -1121,7 +1101,6 @@ function initGames(mode){
     b.onclick=()=>initGames(b.dataset.gmode);
   });
   let area=$('#gameArea');
-  if(!area)return;
   if(mode==='xo'){
     let board=Array(9).fill(''),over=false;
     const wins=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
@@ -1135,7 +1114,7 @@ function initGames(mode){
       area.innerHTML=`<div style="text-align:center;font-weight:700">${msg}</div>
       <div class="game-board">${board.map((v,i)=>`<button class="game-cell" data-xo="${i}">${v}</button>`).join('')}</div>
       <div style="text-align:center"><button class="btn sm" id="xoReset">↻ یاری نوێ</button></div>`;
-      let xoRes=$('#xoReset');if(xoRes)xoRes.onclick=()=>initGames('xo');
+      $('#xoReset').onclick=()=>initGames('xo');
       area.querySelectorAll('[data-xo]').forEach(btn=>btn.onclick=()=>{
         let i=Number(btn.dataset.xo);
         if(over||board[i])return;
@@ -1159,7 +1138,7 @@ function initGames(mode){
         return `<button class="mem-card ${isVis?'open':''}" data-mem="${i}">${isVis?em:'❓'}</button>`;
       }).join('')}</div>
       <div style="text-align:center"><button class="btn sm" id="memReset">↻ تێکەڵکردنەوە</button></div>`;
-      let memRes=$('#memReset');if(memRes)memRes.onclick=()=>initGames('mem');
+      $('#memReset').onclick=()=>initGames('mem');
       area.querySelectorAll('[data-mem]').forEach(btn=>btn.onclick=()=>{
         let i=Number(btn.dataset.mem);
         if(open.length===2||open.includes(i)||matched.includes(i))return;
@@ -1180,15 +1159,12 @@ function initGames(mode){
       <div style="display:flex;gap:8px"><input id="gs_inp" type="number" placeholder="ژمارە بنووسە..." style="width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;background:#0b1426;color:var(--text)"><button class="primary" id="gs_btn">پشکنین</button></div>
       <div id="gs_msg" style="margin-top:12px;font-weight:700"></div>
     </div>`;
-    let gsBtn=$('#gs_btn');
-    if(gsBtn) gsBtn.onclick=()=>{
+    $('#gs_btn').onclick=()=>{
       let v=Number($('#gs_inp').value);if(!v)return;
       tries++;
-      let msgBox=$('#gs_msg');
-      if(!msgBox)return;
-      if(v===target)msgBox.innerHTML=`🎉 ئافەرین! ژمارەکە <strong>${target}</strong> بوو، بە ${tries} هەوڵ دۆزیتەوە!`;
-      else if(v<target)msgBox.textContent='⬆️ ژمارەکە گەورەترە!';
-      else msgBox.textContent='⬇️ ژمارەکە بچووکترە!';
+      if(v===target)$('#gs_msg').innerHTML=`🎉 ئافەرین! ژمارەکە <strong>${target}</strong> بوو، بە ${tries} هەوڵ دۆزیتەوە!`;
+      else if(v<target)$('#gs_msg').textContent='⬆️ ژمارەکە گەورەترە!';
+      else $('#gs_msg').textContent='⬇️ ژمارەکە بچووکترە!';
     };
   }
 }
@@ -1205,14 +1181,10 @@ document.addEventListener('click',e=>{
   let sc=e.target.closest('[data-sidecat]');if(sc){category=sc.dataset.sidecat;view='all';render();}
   let v=e.target.closest('[data-view]');if(v){view=v.dataset.view;category='هەموو';document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b===v));render();}
 });
-let searchInp=$('#search');
-if(searchInp) searchInp.addEventListener('input',render);
-let toolB=$('#toolBody');
-if(toolB) toolB.addEventListener('click',e=>{if(e.target.id==='runTool')run();});
-let closeBtn=$('#closeTool');
-if(closeBtn) closeBtn.addEventListener('click',()=>{if(timerInterval){clearInterval(timerInterval);timerInterval=null;}$('#workspace').classList.remove('show');});
-let themeBtn=$('#theme');
-if(themeBtn) themeBtn.addEventListener('click',()=>{document.body.classList.toggle('light');localStorage.setItem('proLight',document.body.classList.contains('light')?'1':'0');});
+$('#search').addEventListener('input',render);
+$('#toolBody').addEventListener('click',e=>{if(e.target.id==='runTool')run();});
+$('#closeTool').addEventListener('click',()=>{if(timerInterval){clearInterval(timerInterval);timerInterval=null;}$('#workspace').classList.remove('show');});
+$('#theme').addEventListener('click',()=>{document.body.classList.toggle('light');localStorage.setItem('proLight',document.body.classList.contains('light')?'1':'0');});
 if(localStorage.getItem('proLight')==='1')document.body.classList.add('light');
 render();
 </script>
